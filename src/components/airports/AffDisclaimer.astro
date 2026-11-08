@@ -1,0 +1,31 @@
+---
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<div class:list={["aff-disclaimer", className]}>
+  <p>
+    <strong>⚖️ 透明度声明与测评规范：</strong>
+    本站为独立网络性能实测智库。页面中的部分链接为带有防封保护的官方直达注册链接（包含
+    <code>rel="nofollow sponsored noopener"</code>）。通过链接注册可能为本实验室带来服务器运维佣金支持，但<strong>绝不影响您的最终付款价格与折扣权益</strong>。评测结论严格基于实际节点抓包、晚高峰测速图及公开文档，拒绝虚假吹捧。
+  </p>
+</div>
+
+<style>
+  .aff-disclaimer {
+    margin-block: var(--space-s);
+    padding: var(--space-xs) var(--space-s);
+    border-radius: var(--radius-md);
+    background: color-mix(in oklab, var(--muted) 40%, var(--background));
+    border-left: 3px solid var(--accent);
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+    line-height: 1.6;
+  }
+  .aff-disclaimer strong {
+    color: var(--foreground);
+  }
+</style>

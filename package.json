@@ -1,18 +1,18 @@
 {
-  "name": "astro-scholar",
+  "name": "jichangtuijian",
   "description": "A fast Astro theme for academic personal sites, research blogs, projects, and publications.",
   "type": "module",
   "version": "2.2.6",
   "license": "Apache-2.0",
-  "author": "My (Chiffon) Nguyen",
+  "author": "机场推荐测评实验室",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mychiffonn/astro-scholar.git"
+    "url": "https://jichangtuijian.click"
   },
   "bugs": {
-    "url": "https://github.com/mychiffonn/astro-scholar/issues"
+    "url": "https://jichangtuijian.click"
   },
-  "homepage": "https://github.com/mychiffonn/astro-scholar#readme",
+  "homepage": "https://jichangtuijian.click",
   "keywords": [
     "astro",
     "astro-theme",

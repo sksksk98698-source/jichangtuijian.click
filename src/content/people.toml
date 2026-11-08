@@ -1,13 +1,21 @@
+[team]
+id       = "team"
+name     = "机场推荐测评室"
+pronouns = "专业实测 / 拒绝虚标"
+avatar   = "/img/avatar.svg"
+bio      = "深耕跨境网络传输优化、IEPL专线拓扑分析与流媒体解锁实测，为用户提供客观可靠的翻墙梯子选购指南。"
+
+[team.links]
+website       = "https://jichangtuijian.click"
+email         = "contact@jichangtuijian.click"
+
 [mychiffon]
 id       = "mychiffon"
-name     = "My (Chiffon) Nguyen"
-pronouns = "she/her/hers"
-avatar   = "https://gravatar.com/avatar/47b0b83e2fd2cf8838cce30a44e11b7d331cf73a77f7c413f4c4bee986d848c7?size=512&d=initials"
-bio      = "Researcher, Developer, Teacher, and Life-long Learner"
+name     = "特约评测员"
+pronouns = "网络架构师"
+avatar   = "/img/avatar.svg"
+bio      = "专注网络性能基准测试与多协议节点稳定性评估。"
 
 [mychiffon.links]
-website       = "https://mychiffonn.com"
-email         = "hi@mychiffonn.com"
-github        = "https://github.com/mychiffonn"
-googleScholar = "https://scholar.google.com/citations?user=a25a-rUAAAAJ"
-x = "https://x.com/chiffonng"
+website       = "https://jichangtuijian.click"
+email         = "contact@jichangtuijian.click"

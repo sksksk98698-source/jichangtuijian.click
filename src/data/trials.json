@@ -1,0 +1,80 @@
+[
+  {
+    "id": "guangsu",
+    "name": "光速云",
+    "slug": "guangsu",
+    "trialType": "1元体验",
+    "trialDays": "3天完整体验",
+    "traffic": "20GB",
+    "features": "解锁全部 IEPL 专线节点 / 原生住宅 IP / 4K秒开",
+    "restrictions": "单账号限购一次体验包，防刷注册需验证邮箱",
+    "officialUrl": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "affUrl": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "recommendation": "⭐⭐⭐⭐⭐ 综合第一主推，1元即可零成本验证晚高峰0丢包实力"
+  },
+  {
+    "id": "feimao",
+    "name": "飞猫云",
+    "slug": "feimao",
+    "trialType": "免费领取",
+    "trialDays": "24小时免费试用",
+    "traffic": "5GB",
+    "features": "开箱即用专属客户端，支持免费测速与流媒体播放",
+    "restrictions": "试用节点为普通公网中转，高峰期受限",
+    "officialUrl": "https://guangs.flycataff.com/#/?code=6uq0Xe9y",
+    "affUrl": "https://guangs.flycataff.com/#/?code=6uq0Xe9y",
+    "recommendation": "⭐⭐⭐⭐ 纯新手零门槛，注册后登录客户端直接免费体验"
+  },
+  {
+    "id": "weifeng",
+    "name": "微风网络",
+    "slug": "weifeng",
+    "trialType": "1元尝鲜",
+    "trialDays": "7天有效",
+    "traffic": "10GB",
+    "features": "包含亚太 6 个主流节点，支持 4K YouTube 测试",
+    "restrictions": "限制最高同时在线 1 台设备",
+    "officialUrl": "https://edp01.breezenetaff.com/#/?code=t3huofyI",
+    "affUrl": "https://edp01.breezenetaff.com/#/?code=t3huofyI",
+    "recommendation": "⭐⭐⭐⭐ 高性价比大流量梯子，适合测试晚高峰稳定性"
+  },
+  {
+    "id": "dalaoyun",
+    "name": "大佬云",
+    "slug": "dalaoyun",
+    "trialType": "小额试用",
+    "trialDays": "3天体验",
+    "traffic": "15GB",
+    "features": "BGP 多线隧道中转，支持全协议导入",
+    "restrictions": "需在控制台手动兑换试用优惠码",
+    "officialUrl": "https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN",
+    "affUrl": "https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN",
+    "recommendation": "⭐⭐⭐⭐ 适合作为日常备用梯子测试"
+  },
+  {
+    "id": "xingdaomeng",
+    "name": "星岛梦",
+    "slug": "xingdaomeng",
+    "trialType": "按量低门槛",
+    "trialDays": "永久有效不过期",
+    "traffic": "5元购 50GB",
+    "features": "不限时按量计费，用多少扣多少，零资金占用",
+    "restrictions": "不支持退款，按实际出海流量扣费",
+    "officialUrl": "https://guangs.xingdaomeng.com/#/?code=1TynBYnR",
+    "affUrl": "https://guangs.xingdaomeng.com/#/?code=1TynBYnR",
+    "recommendation": "⭐⭐⭐⭐ 完美的二号防失联备用方案，5元买断长久可用"
+  },
+  {
+    "id": "ermao",
+    "name": "二猫云",
+    "slug": "ermao",
+    "trialType": "免费试用",
+    "trialDays": "1小时极速试用",
+    "traffic": "2GB",
+    "features": "注册直接下发节点，免绑卡零资金风险",
+    "restrictions": "试用仅开放香港和日本节点",
+    "officialUrl": "https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW",
+    "affUrl": "https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW",
+    "recommendation": "⭐⭐⭐☆ 适合临时需要紧急查阅海外资料的用户"
+  }
+]

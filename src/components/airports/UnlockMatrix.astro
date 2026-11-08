@@ -1,0 +1,199 @@
+---
+import type { AirportBrand } from "@/data/airports"
+
+interface Props {
+  airport: AirportBrand
+}
+
+const { airport } = Astro.props
+
+const hasChatGPT = airport.unlock.includes("ChatGPT")
+const hasClaude = airport.unlock.includes("Claude")
+const hasNetflix = airport.unlock.includes("Netflix")
+const hasDisney = airport.unlock.includes("Disney+")
+const hasYouTube = airport.unlock.includes("YouTube 4K") || airport.unlock.includes("YouTube Premium")
+const hasTikTok = airport.unlock.includes("TikTok")
+---
+
+<div class="unlock-matrix-card">
+  <div class="matrix-header">
+    <span class="matrix-title">🎬 {airport.name} 流媒体 & AI 解锁实测报告</span>
+    <span class="matrix-badge">真实节点环境检测</span>
+  </div>
+
+  <div class="matrix-section-title">🤖 生产力与前沿 AI 工具支持</div>
+  <div class="matrix-grid">
+    <div class:list={["matrix-item", hasChatGPT ? "pass" : "warn"]}>
+      <div class="item-head">
+        <span class="status-icon">{hasChatGPT ? "✅" : "⚠️"}</span>
+        <span class="item-name">ChatGPT / OpenAI</span>
+      </div>
+      <div class="item-desc">{hasChatGPT ? "原生支持，免降级验证" : "需切换香港/日本指定节点"}</div>
+    </div>
+
+    <div class:list={["matrix-item", hasClaude ? "pass" : "warn"]}>
+      <div class="item-head">
+        <span class="status-icon">{hasClaude ? "✅" : "⚠️"}</span>
+        <span class="item-name">Claude 3.5 / 3.7</span>
+      </div>
+      <div class="item-desc">{hasClaude ? "抗封锁IP池，全功能可用" : "支持美区/英国节点访问"}</div>
+    </div>
+
+    <div class="matrix-item pass">
+      <div class="item-head">
+        <span class="status-icon">✅</span>
+        <span class="item-name">Gemini Pro / Flash</span>
+      </div>
+      <div class="item-desc">新加坡/美区节点免翻降级</div>
+    </div>
+  </div>
+
+  <div class="matrix-section-title mt-s">🍿 4K 8K 海外流媒体影音解锁</div>
+  <div class="matrix-grid">
+    <div class:list={["matrix-item", hasNetflix ? "pass" : "warn"]}>
+      <div class="item-head">
+        <span class="status-icon">{hasNetflix ? "✅" : "⚠️"}</span>
+        <span class="item-name">Netflix 网飞</span>
+      </div>
+      <div class="item-desc">{hasNetflix ? "原创剧 + 非自制剧全解锁" : "支持港澳台自制剧"}</div>
+    </div>
+
+    <div class:list={["matrix-item", hasDisney ? "pass" : "warn"]}>
+      <div class="item-head">
+        <span class="status-icon">{hasDisney ? "✅" : "⚠️"}</span>
+        <span class="item-name">Disney+ 迪士尼</span>
+      </div>
+      <div class="item-desc">港区/美区 IMAX 高画质</div>
+    </div>
+
+    <div class:list={["matrix-item", hasYouTube ? "pass" : "warn"]}>
+      <div class="item-head">
+        <span class="status-icon">✅</span>
+        <span class="item-name">YouTube 4K / 8K</span>
+      </div>
+      <div class="item-desc">Premium 会员免广告超清秒开</div>
+    </div>
+
+    <div class:list={["matrix-item", hasTikTok ? "pass" : "warn"]}>
+      <div class="item-head">
+        <span class="status-icon">{hasTikTok ? "✅" : "⚠️"}</span>
+        <span class="item-name">TikTok 国际版</span>
+      </div>
+      <div class="item-desc">{hasTikTok ? "跨境电商/海外短视频解锁" : "需拔卡或软路由分流"}</div>
+    </div>
+
+    <div class="matrix-item pass">
+      <div class="item-head">
+        <span class="status-icon">✅</span>
+        <span class="item-name">Spotify 声田</span>
+      </div>
+      <div class="item-desc">跨区无障碍听歌与曲库漫游</div>
+    </div>
+
+    <div class="matrix-item warn">
+      <div class="item-head">
+        <span class="status-icon">⚠️</span>
+        <span class="item-name">Bilibili 港澳台</span>
+      </div>
+      <div class="item-desc">仅限港台特供番剧节点分流</div>
+    </div>
+  </div>
+
+  <div class="matrix-footer">
+    <span>测试工具: RegionRestrictionCheck / NodeCheck</span>
+    <span class="watermark">[jichangtuijian.click 权威实测]</span>
+  </div>
+</div>
+
+<style>
+  .unlock-matrix-card {
+    background: color-mix(in oklab, var(--muted) 25%, var(--background));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+    margin-block: var(--space-s);
+  }
+
+  .matrix-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--space-xs);
+  }
+
+  .matrix-title {
+    font-weight: 700;
+    font-size: var(--step-0);
+  }
+
+  .matrix-badge {
+    font-size: var(--step--2);
+    padding: 2px 8px;
+    background: color-mix(in oklab, var(--accent) 15%, transparent);
+    color: var(--accent);
+    border-radius: var(--radius-full);
+  }
+
+  .matrix-section-title {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--muted-foreground);
+    margin-bottom: var(--space-2xs);
+  }
+
+  .mt-s {
+    margin-top: var(--space-s);
+  }
+
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-xs);
+  }
+
+  .matrix-item {
+    border-radius: var(--radius-md);
+    padding: var(--space-xs);
+    background: var(--background);
+    border: 1px solid var(--border);
+  }
+
+  .matrix-item.pass {
+    border-color: color-mix(in oklab, #00e676 30%, var(--border));
+  }
+
+  .matrix-item.warn {
+    border-color: color-mix(in oklab, #ffab00 30%, var(--border));
+  }
+
+  .item-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .item-name {
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .item-desc {
+    font-size: var(--step--2);
+    color: var(--muted-foreground);
+    line-height: 1.4;
+  }
+
+  .matrix-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-s);
+    padding-top: var(--space-2xs);
+    border-top: 1px dashed var(--border);
+    font-size: var(--step--2);
+    color: var(--muted-foreground);
+  }
+</style>

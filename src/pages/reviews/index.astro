@@ -1,0 +1,75 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { getAllAirports } from "@/data/airports"
+import AirportCard from "@/components/airports/AirportCard.astro"
+import AffDisclaimer from "@/components/airports/AffDisclaimer.astro"
+
+const all = getAllAirports()
+---
+
+<Layout
+  title="42篇翻墙机场万字深度测评矩阵 - 2026节点测速与防封全景报告"
+  description="2026年全网42家主流翻墙机场深度评测专栏。包含光速云、暮光加速、飞猫云等晚高峰电信/联通/移动测速大图、ChatGPT/Netflix真实解锁测试与避坑指南。"
+  breadcrumbs={[{ label: "深度测评", icon: "mingcute:file-check-line" }]}
+>
+  <div class="reviews-index-page">
+    <header class="page-intro">
+      <div class="badge-tag">📝 42 篇万字测评矩阵</div>
+      <h1 class="page-title">42 家主流翻墙机场深度评测专栏 (2026 权威实测)</h1>
+      <p class="page-desc">
+        每一篇测评均包含<strong>真实晚高峰节点测速、丢包率抓包、流媒体/ChatGPT 解锁矩阵、优缺点客观剖析与避坑指南</strong>。点击任意机场卡片即可阅读完整测评报告。
+      </p>
+    </header>
+
+    <AffDisclaimer />
+
+    <div class="cards-grid">
+      {all.map((airport) => (
+        <AirportCard airport={airport} />
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .reviews-index-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .page-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: color-mix(in oklab, var(--accent) 15%, transparent);
+    color: var(--accent);
+    border-radius: var(--radius-full);
+    font-size: var(--step--1);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-title {
+    font-size: var(--step-2);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-desc {
+    color: var(--muted-foreground);
+    font-size: var(--step-0);
+    line-height: 1.6;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-s);
+  }
+</style>

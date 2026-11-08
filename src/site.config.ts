@@ -7,43 +7,42 @@ import type {
 } from "@/types"
 
 export const SITE: SiteConfig = {
-  title: "My Scholar",
+  title: "机场推荐",
   description:
-    "Research in computational social science, open methods, and responsible computing.",
-  href: "https://myscholar.pages.dev",
-  author: "Alex Morgan",
+    "2026专业翻墙机场推荐与评测导航。收录全网42家主流机场，涵盖IEPL专线、IPLC内网专线与高性价比中转梯子，提供晚高峰测速实测、ChatGPT/流媒体解锁报告与客户端下载教程。",
+  href: "https://jichangtuijian.click",
+  author: "机场推荐测评实验室",
   dir: "ltr",
   defaultPageImage: "/img/social-preview.png",
   defaultPostImage: "/img/social-preview.png",
 
   locale: {
-    lang: "en-US",
+    lang: "zh-CN",
     options: {
       day: "numeric",
       month: "short",
       year: "numeric",
-      timeZone: "UTC",
+      timeZone: "Asia/Shanghai",
     },
   },
 
-  // Table of contents depth shared by blog posts and project detail pages.
   tocMaxDepth: 3,
 
   blog: {
-    featuredPostCount: 3,
-    postsPerPage: 8,
+    featuredPostCount: 6,
+    postsPerPage: 12,
     shareActions: ["x"],
   },
 
   home: {
-    careerHighlightCount: 4,
-    updateCount: 3,
-    publicationCount: 3,
+    careerHighlightCount: 0,
+    updateCount: 5,
+    publicationCount: 0,
   },
 
   favicon: "/favicon.ico",
   prerender: true,
-  npmCDN: "https://cdn.jsdelivr.net/npm",
+  npmCDN: "https://jichangtuijian.click",
 
   license: {
     label: "CC-BY-4.0",
@@ -53,27 +52,31 @@ export const SITE: SiteConfig = {
 
 export const PROFILE: ProfileConfig = {
   name: SITE.title,
-  tagline: "Computational social scientist and open-methods",
-  email: "hi@mychiffonn.com",
-  location: "Example City",
-  pronouns: "they/them",
+  tagline: "2026 全球高速翻墙机场实测与专线选型指南",
+  email: "contact@jichangtuijian.click",
+  location: "亚太与全球专线节点实测",
+  pronouns: "权威实测 / 拒绝虚标",
   links: {
-    github: "https://github.com/mychiffonn",
-    website: "https://mychiffonn.com/",
+    website: "https://jichangtuijian.click",
   },
-  highlightLinks: ["github"],
+  highlightLinks: ["website"],
   linksPlacement: {
-    header: ["email", "github", "website"],
+    header: [],
     about: false,
     footer: false,
   },
 }
 
 export const NAV_LINKS: LinkConfig[] = [
-  { href: "/projects", label: "Projects" },
-  { href: "/publications", label: "Publications" },
-  { href: "/teaching", label: "Teaching" },
-  { href: "/blog", label: "Blog" },
+  { href: "/ranking", label: "机场排行" },
+  { href: "/brands", label: "42家品牌库" },
+  { href: "/reviews", label: "深度测评" },
+  { href: "/free-trial", label: "免费试用" },
+  { href: "/scam-warning", label: "跑路预警" },
+  { href: "/free-nodes", label: "免费节点" },
+  { href: "/faq", label: "问答FAQ" },
+  { href: "/clients", label: "客户端" },
+  { href: "/knowledge", label: "专线科普" },
 ]
 
 export const NAVIGATION: LinkConfig[] = NAV_LINKS.map(({ href, label }) => ({
@@ -85,9 +88,9 @@ export const PUB_CONFIG: PublicationConfig = {
   maxFirstAuthors: 6,
   maxLastAuthors: 1,
   highlightAuthor: {
-    firstName: "Alex",
-    lastName: "Morgan",
-    aliases: ["A. Morgan"],
+    firstName: "机场",
+    lastName: "推荐",
+    aliases: ["机场推荐"],
   },
   equalSymbols: {
     first: "*",
@@ -98,11 +101,21 @@ export const PUB_CONFIG: PublicationConfig = {
 }
 
 export const FOOTER: FooterConfig = {
-  credits: true,
-  sourceCode: "https://github.com/mychiffonn/myscholar",
-  sourceContent:
-    "https://github.com/mychiffonn/myscholar/tree/main/src/content",
-  footerLinks: [],
+  credits: false,
+  sourceCode: undefined,
+  sourceContent: undefined,
+    footerLinks: [
+    { href: "https://jichangtuijian.click/ranking", label: "年度榜单" },
+    { href: "https://jichangtuijian.click/brands", label: "品牌库" },
+    { href: "https://jichangtuijian.click/free-trial", label: "免费试用" },
+    { href: "https://jichangtuijian.click/scam-warning", label: "跑路预警" },
+    { href: "https://jichangtuijian.click/free-nodes", label: "免费节点" },
+    { href: "https://jichangtuijian.click/faq", label: "高频问答" },
+    { href: "https://jichangtuijian.click/clients", label: "客户端下载" },
+    { href: "https://jichangtuijian.click/knowledge", label: "专线科普" },
+    { href: "https://jichangtuijian.click/privacy", label: "隐私政策" },
+    { href: "https://jichangtuijian.click/terms", label: "服务条款与免责声明" },
+  ],
 }
 
 if (import.meta.env.DEV && typeof window === "undefined") {

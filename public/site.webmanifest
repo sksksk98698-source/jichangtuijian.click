@@ -1,6 +1,6 @@
 {
-  "name": "My Scholar",
-  "short_name": "Scholar",
+  "name": "机场推荐 - 2026专业翻墙机场测评与专线选型指南",
+  "short_name": "机场推荐",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#8878c3",
-  "background_color": "#8878c3",
+  "theme_color": "#00e676",
+  "background_color": "#15151f",
   "display": "standalone"
 }

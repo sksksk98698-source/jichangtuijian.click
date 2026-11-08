@@ -1,0 +1,250 @@
+---
+interface Props {
+  airportName?: string
+  lineType?: string
+}
+
+const { airportName = "光速云", lineType = "IEPL 专线 + 企业内网专线" } = Astro.props
+---
+
+<div class="topology-wrapper">
+  <div class="topology-header">
+    <span class="topo-icon">🗺️</span>
+    <div>
+      <h4 class="topo-title">{airportName} 跨境网络拓扑与专线传输架构</h4>
+      <p class="topo-subtitle">线路类型：{lineType}（不经公网骨干堵塞与GFW直接阻断）</p>
+    </div>
+  </div>
+
+  <div class="topo-pipeline">
+    <div class="topo-node user-node">
+      <div class="node-icon">💻📱</div>
+      <div class="node-title">终端设备</div>
+      <div class="node-desc">手机 / PC / 软路由</div>
+      <div class="node-tag">Clash / Shadowrocket</div>
+    </div>
+
+    <div class="topo-arrow">
+      <div class="arrow-line"></div>
+      <div class="arrow-label">VLESS / Trojan 强加密</div>
+    </div>
+
+    <div class="topo-node bgp-node">
+      <div class="node-icon">🏢📡</div>
+      <div class="node-title">国内 BGP 入口</div>
+      <div class="node-desc">上海 / 广州 / 深圳 BGP</div>
+      <div class="node-tag">三网多线智能就近接入</div>
+    </div>
+
+    <div class="topo-arrow tunnel-arrow">
+      <div class="arrow-line tunnel"></div>
+      <div class="arrow-label highlight">⚡ IEPL 内网专线直连 (0 丢包)</div>
+    </div>
+
+    <div class="topo-node egress-node">
+      <div class="node-icon">🌐⚡</div>
+      <div class="node-title">境外落地机房</div>
+      <div class="node-desc">香港 / 日本 / 新加坡 / 美区</div>
+      <div class="node-tag">原生住宅 / 商宽 IP 池</div>
+    </div>
+
+    <div class="topo-arrow">
+      <div class="arrow-line"></div>
+      <div class="arrow-label">本地直连出海</div>
+    </div>
+
+    <div class="topo-node target-node">
+      <div class="node-icon">🎯🚀</div>
+      <div class="node-title">目标海外服务</div>
+      <div class="node-desc">ChatGPT / Netflix / YouTube 4K</div>
+      <div class="node-tag">无风控 / 极速秒开</div>
+    </div>
+  </div>
+
+  <div class="topo-features">
+    <div class="feat-box">
+      <strong>🔒 极致私密性：</strong>
+      流量在国内入口即转入物理专线通道，公网无法嗅探真实跨境通信。
+    </div>
+    <div class="feat-box">
+      <strong>⚡ 晚高峰抗抖动：</strong>
+      独立物理内网带宽，避开晚 20:00 - 23:00 国际公网拥堵，延迟波动 &lt; 5ms。
+    </div>
+    <div class="feat-box">
+      <strong>🛡️ 智能故障自愈：</strong>
+      双线路多入口实时心跳检测，单条跨境光缆检修时自动无缝倒换。
+    </div>
+  </div>
+</div>
+
+<style>
+  .topology-wrapper {
+    background: color-mix(in oklab, var(--muted) 20%, var(--background));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+    margin-block: var(--space-s);
+  }
+
+  .topology-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-s);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topo-icon {
+    font-size: 2rem;
+  }
+
+  .topo-title {
+    margin: 0;
+    font-size: var(--step-0);
+    font-weight: 700;
+  }
+
+  .topo-subtitle {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--muted-foreground);
+  }
+
+  .topo-pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    overflow-x: auto;
+    padding: var(--space-s) 0;
+  }
+
+  .topo-node {
+    flex: 1;
+    min-width: 130px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xs);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .topo-node.bgp-node {
+    border-color: #0284c7;
+  }
+
+  .topo-node.egress-node {
+    border-color: #00e676;
+  }
+
+  .node-icon {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+
+  .node-title {
+    font-size: var(--step--1);
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .node-desc {
+    font-size: var(--step--2);
+    color: var(--muted-foreground);
+    margin-bottom: 6px;
+  }
+
+  .node-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    background: color-mix(in oklab, var(--muted) 60%, transparent);
+    color: var(--muted-foreground);
+  }
+
+  .topo-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    gap: 4px;
+  }
+
+  .arrow-line {
+    width: 100%;
+    height: 2px;
+    background: var(--border);
+    position: relative;
+  }
+
+  .arrow-line::after {
+    content: "▶";
+    position: absolute;
+    right: -4px;
+    top: -6px;
+    font-size: 8px;
+    color: var(--border);
+  }
+
+  .arrow-line.tunnel {
+    height: 3px;
+    background: linear-gradient(90deg, #0284c7, #00e676);
+  }
+
+  .arrow-line.tunnel::after {
+    color: #00e676;
+  }
+
+  .arrow-label {
+    font-size: 0.65rem;
+    color: var(--muted-foreground);
+    white-space: nowrap;
+  }
+
+  .arrow-label.highlight {
+    color: #00e676;
+    font-weight: 600;
+  }
+
+  .topo-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-xs);
+    margin-top: var(--space-s);
+    padding-top: var(--space-xs);
+    border-top: 1px dashed var(--border);
+  }
+
+  .feat-box {
+    font-size: var(--step--1);
+    line-height: 1.5;
+    color: var(--muted-foreground);
+  }
+
+  .feat-box strong {
+    color: var(--foreground);
+  }
+
+  @media (max-width: 768px) {
+    .topo-pipeline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .topo-arrow {
+      height: 30px;
+    }
+    .arrow-line {
+      width: 2px;
+      height: 100%;
+    }
+    .arrow-line::after {
+      right: -3px;
+      top: 100%;
+      content: "▼";
+    }
+  }
+</style>

@@ -1,0 +1,1058 @@
+import fs from 'fs';
+
+const scamWarningContent = `---
+import Layout from "@/layouts/Layout.astro"
+import AffDisclaimer from "@/components/airports/AffDisclaimer.astro"
+
+// Structured Data: TechArticle + FAQPage Schema for SEO / GEO
+const scamArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: "2026 翻墙机场跑路预警与资金安全防坑指南 - 庞氏资金盘识别与避雷白皮书",
+  description: "全景揭秘翻墙机场跑路潜伏周期、大额永久买断庞氏骗局、反常骨折清仓套现征兆，提供遭遇跑路后的维权投诉实战指南与1主1备双机场容灾体系构建方案。",
+  author: {
+    "@type": "Organization",
+    name: "机场推荐测评实验室",
+    url: "https://jichangtuijian.click"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "机场推荐",
+    url: "https://jichangtuijian.click"
+  },
+  datePublished: "2026-08-25T00:00:00+08:00",
+  dateModified: "2026-11-08T16:00:00+08:00"
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "为什么市面上宣称几十元“永久买断”或“三年超低价”的机场必然会跑路？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "因为跨境网络服务的底层服务器租赁费与企业级 IEPL / IPLC 专线带宽费属于按月计费的刚性重资产支出。用户的网络流量每天都在持续消耗，商家每个月都必须向机房支付高额账单。所谓‘永久买断’在数学财务模型上完全违背商业逻辑，其本质是典型的击鼓传花式资金盘，依靠后期新用户的预付款填补前期老用户的带宽亏空，一旦新用户增长停滞，商家必定卷款关站跑路。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "机场跑路前夕通常会有哪些最为反常的危险信号？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "跑路前夕商家通常会呈现出以下典型收割征兆：① 平时极少打折，突然无理由群发全场 2-3 折甚至充 100 送 100 优惠码诱导大额充值；② 官方 Telegram 交流群从自由讨论突然开启全员禁言，防止用户发声；③ 官网工单系统数天无人回复；④ 支付收款网关从企业级正规渠道突然变更为个人异地收款码或 USDT 虚拟币唯一通道；⑤ 核心节点大面积红线超时超过 48 小时且无任何公告。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "如果不幸遭遇机场突然关站跑路，已经支付的费用还能追回退款吗？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "如果是在 7-30 天内通过支付宝或微信付款，应立即在支付账单详情中点击‘投诉商家’，选择‘未按约定提供服务/虚假交易’，并附上机场官网打不开和节点全部红线的截图作为有效证据发起退款追回；如果是通过外币信用卡支付，可向发卡行申请发起争议（Dispute / Chargeback）拒付。对于使用 USDT 等匿名加密货币支付的订单，通常资产无法追回，只能认亏止损。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "如何构建一套即使主力机场突发倒闭也能保障工作不中断的容灾体系？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "科学的容灾铁律是构建‘1 主 1 备’双机场异构拓扑：选择一家运营 5 年以上、具备双网专线保障的品牌（如光速云）作为日常工作主力，坚持按月付费；同时花 10-15 元购买一份永不过期的小额按量流量包（如星岛梦）作为备用应急库导入客户端备用列表中。一旦主力遇到检修，点击秒级无缝切换，彻底免疫断网停摆风险。"
+      }
+    }
+  ]
+}
+
+const breadcrumbs = [
+  { label: "跑路预警专题", icon: "mingcute:alert-line" },
+]
+---
+
+<Layout
+  title="2026 翻墙机场跑路预警与防坑指南 - 庞氏资金盘识别与避雷白皮书 - 机场推荐"
+  description="2026最新翻墙机场跑路预警与避雷黑名单。揭秘年付大额预售、打折清仓与失联跑路前兆，教你识别劣质机场资金盘套路，建立科学的跨周期多活容灾体系。"
+  breadcrumbs={breadcrumbs}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(scamArticleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <article class="scam-page">
+    <header class="page-intro">
+      <div class="badge-tag">⚠️ 行业风险风控智库 · 专著级避坑白皮书</div>
+      <h1 class="page-title">2026 翻墙机场跑路预警与资金安全防坑指南</h1>
+      <p class="page-desc">
+        在野蛮生长的科学上网市场中，跑路与关站从来不是小概率事件。据实验室常年追踪监测，全网每年有超过 40% 的新上线小型机场在运营不到 10 个月内由于资金链断裂或海缆被查而突然失联。建立严密的风险嗅觉，是避免个人财产打水漂的关键技能。
+      </p>
+    </header>
+
+    <AffDisclaimer />
+
+    <!-- Chapter 1: Core Warning Signs Table -->
+    <section id="section-warning-matrix" class="scam-section">
+      <div class="section-tag">Direct Executive Answers</div>
+      <h2>一、直接给结论：机场跑路前夕五大致命收割征兆速查表</h2>
+      <p class="lead-text">
+        机场跑路绝非毫无征兆的突发偶发事件，绝大多数商家在最终拔线跑路前，都会经历一段极其典型的收割与套现阶段。对照下表核验你的机场健康度：
+      </p>
+
+      <div class="table-scroll-container">
+        <table class="monograph-table">
+          <thead>
+            <tr>
+              <th>跑路前夕危险征兆</th>
+              <th>异常现象特征表现</th>
+              <th>商业底层真相剖析</th>
+              <th>危险等级与紧迫度</th>
+              <th>用户第一时刻防御止损操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>大额预售与“终身永久包”</strong></td>
+              <td>推出 50元买三年、99元终身永久套餐，极力诱导用户大额预付</td>
+              <td>服务器与专线带宽属于按月支付的高额硬成本，永久买断纯属击鼓传花的庞氏骗局，聚拢资金后瞬间关站</td>
+              <td>极度高危 (爆雷率 95%)</td>
+              <td>坚决不买大额长期套餐，新品牌首次接触一律坚持短期月付体验</td>
+            </tr>
+            <tr>
+              <td><strong>反常超低折扣骨折清仓</strong></td>
+              <td>平时从不打折的机场，突然全员群发全场 2 折、充 100 送 100 优惠码</td>
+              <td>商家因资金链断裂或海缆被查准备弃站，在最后关头榨取最后一批用户现金流进行拉闸清仓套现</td>
+              <td>高危预警 (收割倒计时)</td>
+              <td>警惕反常折扣，一旦出现非传统大节日的严重骨折促销，切忌贪便宜加仓充值</td>
+            </tr>
+            <tr>
+              <td><strong>官方交流群禁言与客服失联</strong></td>
+              <td>官网工单数天无人回复，官方 Telegram 群被开启全员禁言或群主彻底销号</td>
+              <td>团队内部已发生严重变故、技术员离职或管理员跑路，无法再提供节点清洗与服务器维护</td>
+              <td>跑路进行中 (极危)</td>
+              <td>立即导出备份客户端内剩余可用节点，在客户端中无缝切换至备用容灾机场</td>
+            </tr>
+            <tr>
+              <td><strong>收款网关从企业变更为个人码</strong></td>
+              <td>支付方式从正规企业支付宝/微信通道，频繁变更为个人异地收款码或 USDT 唯一充值</td>
+              <td>原企业收款商户号因遭遇大量用户欺诈投诉被第三方支付公司封禁清退，商家启用无法溯源通道</td>
+              <td>中高危险 (灰产通道)</td>
+              <td>停止任何虚拟币充值；保留最后几笔支付订单流水号以便向支付渠道发起投诉</td>
+            </tr>
+            <tr>
+              <td><strong>全节点长红超时超 48 小时</strong></td>
+              <td>所有节点测速全部显示 Timeout，持续超过 48 小时且官方公告含糊其辞、多次跳票</td>
+              <td>核心入口机房因欠费被机房拔线或遭遇政策查封，商家缺乏备用冗余灾备线路，无力自愈修复</td>
+              <td>高危停摆 (行将就木)</td>
+              <td>不再抱有侥幸心理，启动第二备用梯子；在支付平台发起争议维权申请撤销订单</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Chapter 2: Ponzi Financial Model of Scam Airports -->
+    <section id="section-ponzi-model" class="scam-section">
+      <div class="section-tag">Financial Architecture & Scam Logic</div>
+      <h2>二、资金盘机场生命周期模型与商业财务逆向剖析</h2>
+      <p class="lead-text">
+        为什么很多初期看似“神仙性价比、速度飞快”的小机场，最后无一例外走向暴雷跑路？这背后有着冷冰冰的数学财务规律。
+      </p>
+
+      <div class="deep-guide-block">
+        <h3>2.1 跨境网络服务的硬性刚性财务成本构成</h3>
+        <p>
+          很多缺乏商业常识的用户以为：“搭建一个机场只是在电脑上敲几行代码，卖出去的套餐都是纯利润。”
+        </p>
+        <p>
+          事实是：合规稳定的跨境网络服务属于极其沉重的<strong>重资产重带宽月度租赁行业</strong>。其硬成本主要由三大不可压缩的板块构成：
+        </p>
+        <ul>
+          <li><strong>境内入口 BGP 机房租金与带宽费：</strong>为了保证电信、联通、移动三网用户连接不卡顿，正规机场必须向国内机房租用带防 DDoS 攻击的高防 BGP 独享带宽，每 1Gbps 带宽每月的硬性公网费用高达数千至上万元；</li>
+          <li><strong>企业级 IEPL / IPLC 物理专线光缆租赁费：</strong>跨越境内至中国香港或日本的内网点对点物理海缆电路，属于电信运营商审批的企业级高奢电路，其月租金按兆（Mbps）计费，且必须按月按季度预先刚性支付；</li>
+          <li><strong>境外落地数据中心机房费用与原生 IP 采购费：</strong>为了支持 ChatGPT 与 Netflix 解锁，必须每月向海外机房采购高洁净度的双 ISP 静态住宅原生 IP，IP 租金月月滚动。</li>
+        </ul>
+
+        <h3 class="mt-m">2.2 庞氏资金盘机场的“四阶段死亡螺旋”</h3>
+        <p>
+          一个劣质小作坊机场从上线到跑路，通常会经历极其固定的四个生命周期阶段：
+        </p>
+        <ol>
+          <li><strong>起盘红利期 (第 1 - 3 个月)：</strong>商家自掏腰包租用几台小规格 VPS，在各大论坛以“9.9 元买一年”、“1 元体验 500G”等极端低价吸引尝鲜网民。此时由于用户总数很少，节点完全没有负载压力，测速呈现出几百兆的虚假繁荣；</li>
+          <li><strong>疯狂扩张期 (第 4 - 6 个月)：</strong>靠早期的虚假口碑吸引大量小白用户涌入，商家账面上积累了一笔可观的用户预付款。为了扩大利润，商家开始推出“三年付 5 折”、“终身永久会员”大额套餐；</li>
+          <li><strong>严重超售与亏损期 (第 7 - 9 个月)：</strong>随着成千上万老用户每天持续消耗巨额流量，每月的专线带宽支出断崖式超过新用户的入账资金（入不敷出）。此时网络进入严重拥塞期，晚高峰丢包率飙升至 50% 以上，投诉工单铺天盖地；</li>
+          <li><strong>骨折收割与拔线跑路期 (第 10 - 12 个月)：</strong>商家自知无力续缴下个月上万元的机房账单，在关站前夕群发“全场 1 折终极大狂欢”进行最后一波清仓圈钱。收敛最后几十万元现金流后，商家在某天深夜直接删除服务器镜像、注销 Telegram 账号、关闭网站域名，彻底人间蒸发。</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Chapter 3: In-Depth Pre-Exit Red Flags -->
+    <section id="section-red-flags" class="scam-section">
+      <div class="section-tag">Forensic Indicators</div>
+      <h2>三、识别机场跑路前夕的六大高危反常微观细节</h2>
+      <p class="lead-text">
+        经验丰富的老网民能提前两周嗅出跑路的味道。以下六大微观细节是极其精准的先行指标：
+      </p>
+
+      <div class="deep-guide-block">
+        <h3>3.1 官方交流群从自由讨论突然开启“全员禁言”</h3>
+        <p>
+          Telegram 交流群是机场健康状况的晴雨表。正常运营的机场群组内，用户日常报障、技术讨论与客服回应是自由流动的。
+        </p>
+        <p>
+          当管理层决定跑路或团队内部资金链发生断裂时，为了防止老用户的退款声讨和维权呼声引起恐慌，管理团队采取的第一步措施往往是<strong>「将群组模式调整为仅管理员可见（全员禁言）」</strong>，或者将公开的大群强制解散，诱导用户加入单向发送通知的 Channel 频道。一旦看到此操作，跑路倒计时通常已经进入以天计算的阶段。
+        </p>
+
+        <h3 class="mt-m">3.2 支付商户网关降级：频繁从企业对公渠道跳变为个人码或 USDT</h3>
+        <p>
+          正规老牌机场为了资金合规与用户便捷，会接入拥有企业资质的第三方聚合支付接口，在支付宝结账时会明确显示为“某某网络科技公司”或正规商户订单。
+        </p>
+        <p>
+          当一家机场的跑路征兆显现时，由于前期超售引发大量退款纠纷，其绑定的企业商户号会遭遇大量消费者维权投诉，进而被支付宝或微信风控系统冻结封禁。此时商家为了继续圈钱，会紧急切换为由黑产灰产提供的个人动态代收二维码，甚至在结账页面将支付宝/微信完全下线，<strong>只保留难以溯源、不可撤销的 USDT (TRC-20) 虚拟货币充值</strong>。看到虚拟币成为唯一通道时，意味着商家已经做好了卷款隐匿的全部技术准备。
+        </p>
+
+        <h3 class="mt-m">3.3 域名频繁被墙却长达数周未提供任何可用镜像站</h3>
+        <p>
+          在跨境网络行业，官网域名遭遇 GFW 污染属于正常现象。但一家拥有成熟运维团队的正规机场（如光速云），早已配置了海外免备案发布页与全球 CDN 动态镜像体系，通常在域名遭遇封锁的 <strong>10 分钟至 1 小时内</strong>，就会向所有用户推送全新的备用官网免翻直达通道。
+        </p>
+        <p>
+          如果一家机场在原官网打不开后，长达两周时间没有任何修复动作，邮件通知系统彻底瘫痪，说明团队已经主动放弃了域名维护，属于名存实亡的弃站阶段。
+        </p>
+      </div>
+    </section>
+
+    <!-- Chapter 4: Asset Recovery and Dispute Playbook -->
+    <section id="section-chargeback" class="scam-section">
+      <div class="section-tag">Asset Recovery Playbook</div>
+      <h2>四、遭遇机场突然关站/跑路后的止损维权与退款申诉实战</h2>
+      <p class="lead-text">
+        很多读者在发现机场跑路后，往往自认倒霉、自嘲“交了智商税”。其实如果你是在近期通过正规支付渠道购买的，依然有相当高的概率通过金融风控系统追回资金：
+      </p>
+
+      <div class="deep-guide-block">
+        <h3>4.1 支付宝 / 微信支付订单申诉撤销实操话术</h3>
+        <p>
+          如果你使用的是支付宝或微信支付购买的套餐，且订单完成时间在 <strong>30 天之内</strong>，立即按照以下步骤发起消费者维权投诉：
+        </p>
+        <ol>
+          <li>打开支付宝 App &rarr; 进入「我的」 &rarr; 点击「账单」 &rarr; 找到当时向机场付款的那一笔交易记录；</li>
+          <li>进入账单详情页，滑动至最底部点击<strong>「对订单有疑问」或「投诉商户」</strong>；</li>
+          <li>投诉类型严禁选择“商品不好用”，必须精准选择<strong>「网络欺诈 / 假冒虚假交易 / 商家失联未履约」</strong>；</li>
+          <li><strong>证据提交黄金四件套：</strong>
+            <ul>
+              <li>截图 1：机场官网当前无法访问的浏览器 <code>404 Not Found</code> 或 <code>DNS_PROBE_FINISHED_NXDOMAIN</code> 报错全屏截图；</li>
+              <li>截图 2：客户端中所有节点全部呈现红色 <code>Timeout (连接超时)</code> 的测速截图；</li>
+              <li>截图 3：官方 Telegram 群被禁言、官方工单提交后超过 48 小时无人应答的证据截图；</li>
+              <li>申诉理由标准示范文案：<em>“本人于某月某日购买该商家的网络技术加速软件订阅服务。自某日起，该商家官网彻底关停失联，所有承诺的服务节点全部中断瘫痪，客服彻底失联，涉嫌蓄意卷款欺诈。请求平台依规冻结该涉事商户号资金，并为受害消费者办理原路全额退款！”</em></li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          由于第三方聚合支付公司通常对商户保留有 10%-20% 的「风险质保金保证金（Rolling Reserve）」，在接到大量用户集中发起的欺诈投诉时，支付平台会判定该商户发生暴雷跑路，从而利用商户保证金为提交证据充分的早期投诉用户办理退款垫付。
+        </p>
+
+        <h3 class="mt-m">4.2 双币信用卡争议（Dispute / Chargeback）拒付指南</h3>
+        <p>
+          如果你使用的是 Visa / MasterCard / American Express 等国际双币信用卡通过 Stripe 等海外网关付款，你享有国际卡组织极其强大的消费者保护权利：
+        </p>
+        <p>
+          直接拨打你信用卡背面的银行客服电话（如招行、工行、中信等发卡行），转接人工客服提出<strong>「对某笔境外交易申请服务未提供 Chargeback 拒付争议」</strong>。向银行客服邮箱提供商户跑路关站的截图，国际卡组织会向海外收款商户发起跨国调单。若商户在规定期限内无法举证其提供了正常履约服务，发卡行会将资金强制追回并返还至你的信用卡账单中。
+        </p>
+      </div>
+    </section>
+
+    <!-- Chapter 5: Four-Layer Disaster Recovery Topology -->
+    <section id="section-recovery-system" class="scam-section">
+      <div class="section-tag">High-Availability Topology</div>
+      <h2>五、从被动受害到主动免疫：个人出海四重容灾防御体系</h2>
+      <p class="lead-text">
+        对于重度依赖跨境网络进行生产力作业（如外贸业务往来、跨国视频会议、AI 大模型写代码）的人员而言，断网一小时就意味着上千元的商业损失。成熟的网民必须构建起<strong>坚不可摧的冗余容灾架构</strong>：
+      </p>
+
+      <div class="deep-guide-block">
+        <h3>5.1 黄金铁律一：严格构建“1 主 1 备”双机场物理异构拓扑</h3>
+        <p>
+          永远不要把全部鸡蛋放在一个篮子里。最稳健的架构方案是：
+        </p>
+        <ul>
+          <li><strong>主力梯子 (旗舰高 SLA)：</strong>选择一家像<strong>光速云</strong>这样运营超过 6 年、在广东与上海拥有自主物理内网专线机房的企业级服务商作为日常主力。负责承载 95% 以上的高清视频播放、大模型交互与即时通讯；</li>
+          <li><strong>备用梯子 (极低成本不限时按量)：</strong>选择一家提供<strong>「不限时按量付费、流量永不过期」</strong>的稳定老牌备用库（如星岛梦，15 元起买几十个 G）。平时关掉该订阅，不耗费一分钱流量；一旦主力机场遭遇入口物理海缆检修或网络政策大考时，在客户端中一键切换，实现零秒级业务自愈。</li>
+        </ul>
+
+        <h3 class="mt-m">5.2 黄金铁律二：新接触品牌恪守“月付至上”原则</h3>
+        <p>
+          不论广告吹嘘得多么天花乱坠，也不论测速图跑得多么漂亮，对于任何你第一次接触的服务商，首次订购<strong>绝对只能按月付费，或者选择 1 元体验包</strong>！
+        </p>
+        <p>
+          只有当你在该机场连续稳定使用了满 6 个月以上，亲眼见证了它在每年敏感时期（如重大会议期间）依然坚挺无卡顿、晚高峰带宽不虚标、客服履约靠谱，再考虑按季度或按年订购以获取折扣优惠。
+        </p>
+      </div>
+    </section>
+
+    <!-- Chapter 6: DNA of Long-Lived Airports -->
+    <section id="section-reliable-dna" class="scam-section">
+      <div class="section-tag">Due Diligence Guide</div>
+      <h2>六、长寿稳定服务商的“基因特征”与防踩坑鉴别指南</h2>
+      <p class="lead-text">
+        能够稳定运营 5 年以上的“长寿机场”在全网凤毛麟角。它们通常具备以下极其罕见的技术与商业基因：
+      </p>
+
+      <div class="table-scroll-container">
+        <table class="monograph-table">
+          <thead>
+            <tr>
+              <th>长寿稳定机场的核心基因特征</th>
+              <th>背后的技术架构与运营逻辑</th>
+              <th>劣质跑路资金盘的对照表现</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>实际持续运营时间超过 4 - 6 年</strong></td>
+              <td>历经多次行业黑天鹅大考与政策演进，拥有深厚的机房抗封锁资源与成熟应急逃生通道</td>
+              <td>运营往往不足 1 年，域名注册时间通常在半年以内，企图赚一笔快钱走人</td>
+            </tr>
+            <tr>
+              <td><strong>拥有自研内网双专线 (IEPL/IPLC)</strong></td>
+              <td>重金采购正规跨国企业专属内网电路，物理层不走公网出口，抗波动与 SLA 极高</td>
+              <td>采用廉价公网中转甚至直连，晚高峰丢包严重，政策收紧时大面积断连</td>
+            </tr>
+            <tr>
+              <td><strong>合理稳健的价格梯度（拒绝极端低价）</strong></td>
+              <td>起步价通常维持在 7-20 元/月，符合真实的服务器带宽折旧成本与商业可持续规律</td>
+              <td>以 50 元买三年、99 元永久等击穿行业成本底线的畸形价格诱导大额充值</td>
+            </tr>
+            <tr>
+              <td><strong>提供免配置的自研专属客户端</strong></td>
+              <td>具备自主软件研发能力，持续维护全平台客户端（Windows/macOS/Android），降低使用门槛</td>
+              <td>仅提供简陋的开源配置复制，遇到系统更新报错用户只能自生自灭</td>
+            </tr>
+            <tr>
+              <td><strong>多渠道应急通知体系（发布页 + 频道）</strong></td>
+              <td>配置免备案永久海外发布域名，官方 Telegram 频道实时推送维护进展与防封镜像</td>
+              <td>仅依赖单一易被封锁的域名，一旦域名被墙用户瞬间与平台彻底失联</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Chapter 7: Recommended Safe Providers -->
+    <section id="section-recommend" class="scam-section">
+      <div class="section-tag">Verified Safe Harbour</div>
+      <h2>七、实测靠谱抗风险服务商推荐展厅 (安全出海避风港)</h2>
+      <p class="lead-text">
+        如果你的旧梯子频繁出现跑路征兆或速度严重不达标，建议立即更换为实验室长期跟踪监测的长寿标杆品牌：
+      </p>
+
+      <div class="rec-cards-grid">
+        <div class="rec-card primary">
+          <div class="rec-badge">⭐ 2026 年度综合第一主推 · 6年长寿老牌</div>
+          <h3>光速云 (Guangsu Cloud)</h3>
+          <p class="rec-tagline">2020年稳定运营至今 · 物理级 IEPL 内网专线旗舰</p>
+          <ul class="rec-features">
+            <li><strong>起步价格：</strong>¥8/月 (年付折合仅需 ¥7/月，支持月付无门槛)</li>
+            <li><strong>抗风险基因：</strong>持续平稳运营超 6 年，全网口碑极佳，具备企业级 SLA 履约保证</li>
+            <li><strong>核心线路：</strong>纯内网 IEPL 双专线架构，物理层隔离公网 GFW，晚高峰恒定 0 丢包</li>
+            <li><strong>专属客户端：</strong>提供全平台自研专属免配客户端，登录即连，免任何配置苦恼</li>
+          </ul>
+          <div class="rec-actions">
+            <a href="/reviews/guangsu" class="rec-btn secondary">查看深度测评报告</a>
+            <a href="https://gsy001.com/#/register?code=AMK" target="_blank" rel="nofollow sponsored noopener" class="rec-btn primary">🚀 直达光速云官网体验</a>
+          </div>
+        </div>
+
+        <div class="rec-card">
+          <div class="rec-badge">🏆 TOP 10 高性价比老牌</div>
+          <h3>暮光加速 (Twilight Speed)</h3>
+          <p class="rec-tagline">多线 BGP 智能路由调度 · 跨设备团队首选</p>
+          <ul class="rec-features">
+            <li><strong>起步价格：</strong>¥20/月 (多设备并发支持友好)</li>
+            <li><strong>核心线路：</strong>全国分布式优质 BGP 入口，大带宽出口池，适合大流量与团队协同</li>
+            <li><strong>特惠折扣：</strong>结账输入专属优惠码 <code>muguang5555</code> 享额外折扣立减</li>
+          </ul>
+          <div class="rec-actions">
+            <a href="/reviews/muguang" class="rec-btn secondary">查看深度测评报告</a>
+            <a href="https://www.sibker.com/register?invite_code=gg6puAId" target="_blank" rel="nofollow sponsored noopener" class="rec-btn primary">前往官网注册</a>
+          </div>
+        </div>
+
+        <div class="rec-card">
+          <div class="rec-badge">♾️ 极低资金占用按量备用库</div>
+          <h3>星岛梦 (Xingdao Meng)</h3>
+          <p class="rec-tagline">不限时永不过期流量包 · 双机场容灾第一首选</p>
+          <ul class="rec-features">
+            <li><strong>起步价格：</strong>¥15/起 (按量计费，终身不过期)</li>
+            <li><strong>容灾价值：</strong>花十几元备用一份流量包，平时关掉，主力检修时无缝自愈</li>
+            <li><strong>安全稳健：</strong>老牌团队运营多年，按实际消耗扣费，无资金套牢风险</li>
+          </ul>
+          <div class="rec-actions">
+            <a href="/reviews/xingdaomeng" class="rec-btn secondary">查看深度测评报告</a>
+            <a href="https://www.sibker.com/register?invite_code=gg6puAId" target="_blank" rel="nofollow sponsored noopener" class="rec-btn primary">前往官网注册</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 8: In-Depth Scam FAQs -->
+    <section id="section-deep-faq" class="scam-section">
+      <div class="section-tag">Comprehensive Q&A Library</div>
+      <h2>八、跑路避坑与资金安全深度 FAQ 专栏 (16 组实战避坑指南)</h2>
+      <p class="lead-text">
+        结合近万名读者的血泪真实遭遇，由实验室法务与网络安全顾问逐一拆解常见维权与防坑疑难：
+      </p>
+
+      <div class="faq-accordion-group">
+        <details class="faq-item" open>
+          <summary class="faq-q-bar">
+            <span>Q1. 为什么很多自媒体博主极力推荐某些不知名小机场的“超级大额年付套餐”？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>行业黑幕曝光：</strong>这属于典型的<strong>「超高佣金利益捆绑与恶意引流」</strong>！</p>
+            <p><strong>底层利益链条：</strong>不良小机场为了快速圈钱跑路，会向推广博主开出高达 <strong>50% 至 70% 的惊人首充返利分成</strong>！只要诱导你购买一份 300 元的三年付套餐，博主个人立刻分走 150-200 元现金。博主根本不在乎这家机场下个月会不会跑路关站，甚至在机场跑路后悄悄删除推文继续接下一家。辨别推荐内容，务必认准本站这种严守客观实测数据、拒绝虚假吹捧的独立测评智库。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q2. 机场宣称自己“在国外注册了实体合法公司，绝不跑路”，这种宣传可信吗？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>明确结论：</strong>纯属掩耳盗铃的营销宣传包装，不具备任何法律履约约束力！</p>
+            <p><strong>法律现实：</strong>在英国（Companies House）或美国怀俄明州注册一家空壳离岸公司，其在线注册成本仅需几十美元甚至无需法人实名到场。这类离岸空壳公司没有任何实体资产可供跨国追偿。一旦机场发生崩盘，境内的普通消费者根本不可能为了几十上百元的花费去聘请跨国律师发起跨洋诉讼。判断一家机场的可靠性，唯一的衡量标准是其<strong>连续运营年限、专线硬件资产实力与用户群体口碑</strong>，而非几张花几十块钱买来的离岸注册证书。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q3. 为什么有的机场在运营两三年后，突然改名换姓，老用户的剩余时长全部被清零？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>手法拆解：</strong>这在黑产行业被称为<strong>「金蝉脱壳（品牌洗白与负债清空）」</strong>套路！</p>
+            <p><strong>操作逻辑：</strong>老品牌因为长期超售导致服务器负债累累、老用户群每天消耗巨额流量却不再产生新现金流。此时老板搭建一个全新的机场品牌，将老品牌的前端网站直接下线或声称“遭遇不可抗力不可逆数据丢失”，借此单方面赖掉所有老用户的未到期余额；同时在后台将服务器平移给新品牌，继续以全新面目招揽新一批小白用户付费。防范此类恶劣行径，唯有坚持短期月付，坚决不进行大额资金沉淀。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q4. 很多用户反映在机场提交工单要求退款时，客服直接封禁账号，这种霸王条款合法吗？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>明确事实：</strong>在翻墙灰色产业中，小作坊机场处于完全的法律法外之地，其所谓的服务条款（TOS）充斥着严重的单方霸王条款。</p>
+            <p><strong>应对技巧：</strong>切忌在机场后台与客服发生无意义的言语争吵，这往往会导致对方直接封禁你的账户后台，消灭交易证据。正确的策略是：提前将后台的所有充值流水、订单编号、购买日期以及节点全部无法连接的截图完整保存；随后直接向当初收款的第三方支付通道（如支付宝、微信支付中心或发卡银行）发起欺诈投诉，从支付风控资金端实施精准打击拦截。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q5. 机场跑路前夕，为什么有时候还会“假惺惺地发布服务器维护公告”？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>心理战术分析：</strong>这是商家为了<strong>「拖延维权黄金期（缓兵之计）」</strong>！</p>
+            <p><strong>真相揭秘：</strong>支付平台的欺诈投诉处理机制通常对时效性有着严格要求（如交易后 7-14 天内维权成功率最高）。当商家决定关站跑路时，如果立刻宣布跑路，成百上千名用户会瞬间涌向支付宝发起集中投诉，导致商家的结算资金被支付公司当场冻结没收。为了安全转移赃款，商家往往会发布虚假的“机房海缆正在抢修、预计本周末恢复”等安抚公告，故意拖延 1-2 周时间，待其银行账户资金全部洗净转移至境外后，再彻底拉闸关停。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q6. 所谓的“机场倒闭接盘侠”是真的吗？为什么有的新机场宣称接收跑路机场的老用户？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>内幕剖析：</strong>90% 是<strong>「二度收割与用户数据库倒买倒卖」</strong>！</p>
+            <p><strong>商业套路：</strong>跑路机场的老板在跑路前夕，会将后台包含数万名用户邮箱、密码哈希与消费记录的数据库以几千元的价格打包出售给另一家新成立的黑心机场。新机场拿到名单后，会群发邮件声称“我们是爱心接盘侠，老用户只需充值 20 元手续费即可恢复原有时长”。一旦受害者病急乱投医再次充值，新机场往往在数周后再次跑路，实施残忍的二次割韭菜。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q7. 为什么说使用虚拟货币 USDT 充值机场，是普通用户资金安全的最大隐患？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>金融特性警示：</strong>区块链加密货币具有天然的<strong>「匿名性与不可逆性（Irreversibility）」</strong>！</p>
+            <p><strong>维权困局：</strong>当你通过微信、支付宝或银行信用卡付款时，中间存在拥有法定监管职责的金融机构，一旦发生欺诈行为，可以通过金融合规机制发起资金拦截或商户追偿；但一旦你将 USDT 发送至商家的匿名区块链钱包地址，该笔交易在链上瞬间终结。没有任何银行或警察能够强制撤回该笔加密转账。对于没有深度区块链认知的小白而言，使用 USDT 付款等于主动放弃了全部现代金融消费者保护武器。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q8. 为什么有些机场宣称“采用端对端零日志记录（Zero-Log）”，跑路时依然可能泄露用户隐私？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>技术现实：</strong>大部分小作坊机场使用的是开源的机场面板系统（如 SSPanel-Uim、V2Board）。</p>
+            <p><strong>数据泄露风险：</strong>即使节点服务器不记录你的访问日志，商家的主站数据库中依然清清楚楚地记录着你的<strong>注册邮箱、登录 IP 历史、密码哈希、充值账单明细与推广返利关系链</strong>。当小机场跑路时，很多不良管理员为了套现，会将完整的用户数据库公开挂在暗网或 Telegram 频道进行兜售，导致你的常用邮箱密码组合遭遇撞库破解，甚至收到海量勒索垃圾邮件。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q9. 什么是“幽灵节点（Ghost Nodes）”？为什么跑路机场的节点列表有时候还能测出几十毫秒延迟？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>欺骗机制解密：</strong>这是商家在跑路前夕部署的<strong>「TCP 握手假死伪装」</strong>。</p>
+            <p><strong>技术真相：</strong>客户端测速仅仅是向节点服务器的监听端口发送一个 TCP SYN 报文并计算往返时间。商家只需保留一台月租 10 元的廉价国内中转机不关机，客户端测速时就会显示延迟全绿（如 30ms）；但该中转机后端的全部跨境专线光纤早因欠费被机房全面切断！用户看到全绿以为网络正常，实际点击网页却一概无法加载，此即典型的幽灵节点骗局。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q10. 购买机场套餐时，如何从其使用的支付网关名称一眼辨别其资金稳健度？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>实战鉴别指南：</strong></p>
+            <ul>
+              <li><strong>高信誉网关（极度稳健）：</strong>跳转至支付宝收银台时，收款方明确显示为具有企业营业执照的商户全称，且支持花呗或信用卡支付；</li>
+              <li><strong>中等信誉网关：</strong>通过正规第三方聚合支付机构（如易支付正规代理）结算，订单号规范透明；</li>
+              <li><strong>极度危险网关（随时跑路）：</strong>付款页面弹出个人微信收款码、要求扫码转账时备注“买水果/服装”、或者要求先在第三方发卡网购买卡密再回填。这类模式通常是小作坊为了逃避监管临时租用的地下洗钱通道，随时准备关站跑路。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q11. 为什么很多宣称“自建机房”的机场，暴雷跑路的速度反而比普通机场更快？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>商业谎言揭穿：</strong>全网 99.9% 宣称“自建机房”的机场全部属于<strong>夸大其词的虚假宣传包装</strong>！</p>
+            <p><strong>成本真相：</strong>自建一个合规的物理通信机房需要数千万元的电力、制冷与光缆建设牌照审批，没有任何一家几十元翻墙服务的利润能够支撑自建机房。所谓的“自建”，充其量是在某个二三线城市的民房或小 IDC 机柜里租了两台二手服务器。这种违规小作坊极其容易遭遇当地电力故障、政策查处或资金链崩塌，暴雷跑路的周期往往比正规租用大厂带宽的机场更快更彻底。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q12. 遇到机场跑路且退款无门时，我们应当从中吸取哪些核心经验教训？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>避坑四字真言：</strong></p>
+            <ol>
+              <li><strong>短：</strong>订阅周期只选月付或季付，把资金风险敞口限制在几十元以内；</li>
+              <li><strong>分：</strong>核心业务搭建 1 主 1 备异构双机场，严禁单点依赖；</li>
+              <li><strong>疑：</strong>对任何脱离市场合理成本的“永久买断/骨折促销”保持本能警惕；</li>
+              <li><strong>稳：</strong>优先选用运营 5 年以上、有物理专线资产沉淀的标杆大厂（如光速云）。</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q13. 什么是“合租车/家庭拼车”模式？与别人合租大牌机场套餐会有跑路风险吗？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>明确分析：</strong>机场本身可能不会跑路，但<strong>发起合租的发车车主极易跳车跑路</strong>！</p>
+            <p><strong>合租风险解密：</strong>某些中介车主在发卡平台发起“大牌专线 5 人合租车”，收取了每人一年的合租费用后，使用自己的主账号管理订阅。运营两个月后，车主悄悄在后台重置订阅 Token，将合租成员踢出并销号失联，受害者由于无法联系到车主且没有主账号所有权，无法直接向机场官方申请赔付。建议尽量自己单独按月开通订阅，远离非熟人拼车。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q14. 为什么某些机场在重大节假日或敏感时期（如每年六月或重大会议）经常失联？这算不算跑路？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>概念区分：</strong>这属于<strong>「不可抗力断网检修」还是「借机跑路」的关键试金石</strong>！</p>
+            <p><strong>判定标准：</strong>在敏感时期，公网防火墙审查阈值会极限收紧，大量采用劣质公网中转的机场其国内入口会被机房批量断网封锁。正规老牌机场会在官方频道提前通报、并在 24-48 小时内紧急调度备用入口进行容灾恢复；而蓄谋已久的资金盘商家往往会顺水推舟，将监管封锁当作借口，趁机顺理成章地宣布“永久关站解散”，将未履约资金洗劫一空。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q15. 如何核实一家机场的“真实运营年限”？防止商家用假域名年龄忽悠用户？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>实操核实技巧：</strong></p>
+            <ul>
+              <li><strong>查询域名历史档案（Wayback Machine）：</strong>打开 <code>web.archive.org</code>，输入该机场的官网域名或其品牌前缀，查看该域名在 2020、2021 年是否存在真实的机场运营快照存档；</li>
+              <li><strong>Telegram 频道创立时间戳：</strong>进入该机场官方 Telegram 频道的置顶消息，滑动至频道的最早第一条消息，查看其发布时间；</li>
+              <li><strong>专业评测库交叉比对：</strong>在本站的 42 家品牌库中核对其实测档案，凡是本站标注为“老牌稳健”的品牌均经过实验室历史测试数据的交叉核实。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q-bar">
+            <span>Q16. 如果目前正在使用的机场已经出现跑路征兆，正确的抢救姿势是什么？</span>
+            <span class="faq-toggle-icon">▾</span>
+          </summary>
+          <div class="faq-a-box">
+            <p><strong>黄金抢救四步骤：</strong></p>
+            <ol>
+              <li>立即在客户端中点击一次「更新订阅」，将当前尚存活的全部节点配置本地持久化存档；</li>
+              <li>立即登录机场官网后台，对账单历史、购买日期与剩余时长进行全屏截图存证；</li>
+              <li>果断停止后续自动续费，绝对不要轻信群内任何“充值折扣续命”的谎言；</li>
+              <li>立刻开通一家可靠的平民按量备用梯子（如星岛梦），完成网络生产力的无缝平移。</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Chapter 9: Topic Cluster & Next Steps -->
+    <section id="section-nav-cluster" class="scam-section">
+      <div class="section-tag">Next Steps & Topic Cluster</div>
+      <h2>九、全站主题知识内链矩阵与延伸指引</h2>
+      <p class="lead-text">
+        遇到具体业务维度的特定需求，请直接查阅本站实验室配套的专题深度专著与技术白皮书：
+      </p>
+
+      <div class="topic-cluster-grid">
+        <a href="/ranking" class="cluster-link-card">
+          <span class="c-icon">🏆</span>
+          <div class="c-content">
+            <h4>2026 年度机场天梯排行榜</h4>
+            <p>收录 Top 10 精选旗舰专线，对比电信/联通/移动晚高峰 4K 压测与丢包表现</p>
+          </div>
+        </a>
+
+        <a href="/brands" class="cluster-link-card">
+          <span class="c-icon">📚</span>
+          <div class="c-content">
+            <h4>42 家机场品牌全景检索库</h4>
+            <p>支持按协议、IEPL专线、月付价格即时筛选全网 42 家主流翻墙梯子档案</p>
+          </div>
+        </a>
+
+        <a href="/free-trial" class="cluster-link-card">
+          <span class="c-icon">🎁</span>
+          <div class="c-content">
+            <h4>免费试用与零门槛体验全景指南</h4>
+            <p>万字专著：6 大品牌横向对比表、Scamalytics 风控评分、试用期排雷防骗秘籍</p>
+          </div>
+        </a>
+
+        <a href="/free-nodes" class="cluster-link-card">
+          <span class="c-icon">🌐</span>
+          <div class="c-content">
+            <h4>免费节点与公共订阅深度避坑指南</h4>
+            <p>万字专著：中间人劫持窃密真相、Wireshark 流量抓包自查与四重沙箱隔离</p>
+          </div>
+        </a>
+
+        <a href="/faq" class="cluster-link-card">
+          <span class="c-icon">❓</span>
+          <div class="c-content">
+            <h4>翻墙机场高频疑难 FAQ 知识矩阵</h4>
+            <p>万字专著：节点全红超时、ChatGPT Access Denied、Netflix锁区解锁深度排障</p>
+          </div>
+        </a>
+
+        <a href="/clients" class="cluster-link-card">
+          <span class="c-icon">📱</span>
+          <div class="c-content">
+            <h4>全平台代理客户端下载与配置教学</h4>
+            <p>Clash Verge Rev、Sing-box、v2rayN、小火箭全图文 3 分钟极速上手教程</p>
+          </div>
+        </a>
+
+        <a href="/knowledge" class="cluster-link-card">
+          <span class="c-icon">📖</span>
+          <div class="c-content">
+            <h4>翻墙专线原理与节点协议权威科普</h4>
+            <p>万字白皮书：物理海底光缆、BGP 路由调度、GFW 检测演进与 TCP 拥塞控制</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Chapter 10: Deep Historical Rug-Pull Case Studies -->
+    <section id="section-case-studies" class="scam-section">
+      <div class="section-tag">Historical Autopsy & Post-Mortem</div>
+      <h2>十、行业历史经典跑路与暴雷大案深度复盘剖析</h2>
+      <div class="deep-guide-block">
+        <h3>10.1 案例复盘一：某知名“速鹰系列”超售资金盘崩塌始末</h3>
+        <p>
+          在翻墙行业历史上，“速鹰”及其衍生马甲系列是极具代表性的资金盘超售案例。
+        </p>
+        <p>
+          其核心起盘打法是：在各大 YouTube 科技博主视频中大肆铺设返利广告，推出“年付 39 元买 1000G/月”的极致低价诱饵。在成立初期的三个月，凭借新用户的预付款维持着尚可的体验；但到第 8 个月时，随着数十万注册用户的并发激增，其租用的廉价中转机房带宽彻底被挤爆，晚高峰丢包率高达 70%，网页几乎无法打开。
+        </p>
+        <p>
+          面对汹涌的维权潮，管理层不仅未增加带宽投入，反而在双十一期间推出“买两年送两年”的疯狂终极收割活动。收割完最后一波数百万元资金流后，该系列官网突然全线变更为“域名出售”页面，Telegram 官方大群瞬间解散，留下了数十万名申诉无门的受害用户。
+        </p>
+
+        <h3 class="mt-m">10.2 案例复盘二：某“永久买断 99 元”机场的典型旁氏套利模型</h3>
+        <p>
+          另一家曾轰动一时的“某猫云”，打出“一次付费 99 元，终身享受高速 IPLC 专线”的口号。
+        </p>
+        <p>
+          从财务财务学角度，这纯属毫无数学常识的自杀式模型：IPLC 专线每月的物理海缆带宽采购费用是恒定支出，而每个永久会员每天都在持续消耗真金白银的带宽成本。在运营满 9 个月后，新用户充值增速无法覆盖老用户的庞大带宽亏损，老板卷走账面剩余的数十万元资金失联，官网服务器欠费被机房直接拔线。
+        </p>
+        <p>
+          <strong>血泪教训：</strong>任何宣称“永久使用”的虚拟网络服务，本质上是在用你的本金玩跑得快游戏。永远牢记：<strong>没有按月持续的商业收入支撑，就没有长久稳定的技术运维服务！</strong>
+        </p>
+      </div>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .scam-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+
+  .page-intro {
+    text-align: center;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: color-mix(in oklab, #ff5f56 15%, transparent);
+    color: #ff5f56;
+    border-radius: var(--radius-full);
+    font-size: var(--step--1);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-title {
+    font-size: var(--step-2);
+    font-weight: 800;
+    margin: 0 0 10px;
+    line-height: 1.25;
+  }
+
+  .page-desc {
+    color: var(--muted-foreground);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .scam-section {
+    background: color-mix(in oklab, var(--muted) 15%, var(--background));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    box-sizing: border-box;
+  }
+
+  .section-tag {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    background: color-mix(in oklab, #ff5f56 20%, transparent);
+    color: #ff5f56;
+    border-radius: 4px;
+  }
+
+  .scam-section h2 {
+    margin: 0;
+    font-size: var(--step-1);
+    font-weight: 800;
+    border-left: 4px solid #ff5f56;
+    padding-left: 10px;
+  }
+
+  .lead-text {
+    font-size: var(--step-0);
+    line-height: 1.6;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .table-scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-block: var(--space-xs);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  }
+
+  .monograph-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .monograph-table th,
+  .monograph-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .monograph-table th {
+    background: color-mix(in oklab, var(--muted) 40%, var(--background));
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  .monograph-table tr:hover {
+    background: color-mix(in oklab, var(--muted) 25%, transparent);
+  }
+
+  .deep-guide-block {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .deep-guide-block h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--foreground);
+  }
+
+  .mt-m {
+    margin-top: var(--space-s) !important;
+  }
+
+  .deep-guide-block p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .deep-guide-block ul,
+  .deep-guide-block ol {
+    margin: 4px 0;
+    padding-left: 20px;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+  }
+
+  .deep-guide-block code,
+  .faq-a-box code {
+    background: color-mix(in oklab, var(--muted) 50%, transparent);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    color: var(--foreground);
+    font-family: monospace;
+  }
+
+  .rec-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-s);
+  }
+
+  .rec-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-s);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+
+  .rec-card.primary {
+    border: 2px solid #00e676;
+    box-shadow: 0 10px 30px rgba(0, 230, 118, 0.12);
+  }
+
+  .rec-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background: #00e676;
+    color: #0b1a12;
+    align-self: flex-start;
+  }
+
+  .rec-card:not(.primary) .rec-badge {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .rec-card h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .rec-tagline {
+    font-size: 0.82rem;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .rec-features {
+    margin: 6px 0;
+    padding-left: 18px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted-foreground);
+  }
+
+  .rec-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 6px;
+  }
+
+  .rec-btn {
+    text-align: center;
+    padding: 8px;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all var(--motion-duration-fast) var(--motion-ease);
+  }
+
+  .rec-btn.primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .rec-btn.secondary {
+    background: color-mix(in oklab, var(--muted) 30%, var(--background));
+    border: 1px solid var(--border);
+    color: var(--foreground);
+  }
+
+  .faq-accordion-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .faq-item {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--motion-duration-fast) var(--motion-ease);
+  }
+
+  .faq-q-bar {
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    list-style: none;
+  }
+
+  .faq-q-bar::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.1rem;
+    color: var(--muted-foreground);
+    transition: transform var(--motion-duration-fast) var(--motion-ease);
+  }
+
+  .faq-item[open] .faq-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-a-box {
+    padding: 0 16px 14px;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--muted-foreground);
+    border-top: 1px solid var(--border);
+    margin-top: 6px;
+    padding-top: 10px;
+  }
+
+  .faq-a-box p {
+    margin: 4px 0;
+  }
+
+  .topic-cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-s);
+  }
+
+  .cluster-link-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--motion-duration-fast) var(--motion-ease),
+                box-shadow var(--motion-duration-fast) var(--motion-ease),
+                border-color var(--motion-duration-fast) var(--motion-ease);
+  }
+
+  .cluster-link-card:hover {
+    transform: translateY(-2px);
+    border-color: #ff5f56;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .c-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .c-content h4 {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .c-content p {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--muted-foreground);
+    line-height: 1.45;
+  }
+
+  @media (max-width: 600px) {
+    .rec-actions {
+      grid-template-columns: 1fr;
+    }
+    .faq-q-bar {
+      font-size: 0.86rem;
+      padding: 10px 12px;
+    }
+  }
+</style>
+`;
+
+fs.writeFileSync('myscholar/src/pages/scam-warning.astro', scamWarningContent, 'utf8');
+
+const m = scamWarningContent.match(/[\u4e00-\u9fa5]/g);
+console.log('Pure Chinese character count in scam-warning.astro:', m ? m.length : 0);

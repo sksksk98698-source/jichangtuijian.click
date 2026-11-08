@@ -1,0 +1,131 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+const pageTitle = "服务条款与免责声明 (Terms of Service) - 机场推荐智库"
+const pageDesc = "本站使用条款、实测数据免责声明与风险告知。本站为独立第三方网络性能研究实验室，所有评测数据基于客观实测，用户需在法律许可范围内合规使用网络。"
+
+const breadcrumbs = [{ label: "服务条款", icon: "mingcute:file-check-line" }]
+---
+
+<Layout title={pageTitle} description={pageDesc} breadcrumbs={breadcrumbs}>
+  <div class="legal-container">
+    <header class="legal-header">
+      <div class="legal-badge">E-E-A-T 独立准则 · 实测数据免责规范</div>
+      <h1 class="legal-title">使用条款、数据溯源与免责声明</h1>
+      <p class="legal-date">最近更新生效日期：2026 年 11 月 8 日</p>
+    </header>
+
+    <div class="legal-card intro-box">
+      <p>
+        <strong>【法律声明】</strong>欢迎访问“机场推荐智库”（<code>https://jichangtuijian.click</code>，以下统称“本站”）。访问、浏览或使用本站提供的内容，即表示您已完全理解并自愿遵守本使用条款及免责声明的所有条款。若您不同意以下任何条款，请立即终止访问本站。
+      </p>
+    </div>
+
+    <section class="legal-section">
+      <h2>一、网站性质与学术/技术定位</h2>
+      <p>
+        1. 本站系专注于网络拓扑工程、BGP 路由调度、跨境 IEPL/IPLC 物理光缆链路性能及网络代理协议（如 VLESS、Shadowsocks、Hysteria 2、Sing-box）技术研究的独立第三方实测智库。
+      </p>
+      <p>
+        2. <strong>本站不拥有、不开发、不运营、亦不转售任何代理服务或翻墙软件。</strong>本站的所有文章、排行榜与专题矩阵，仅作为计算机网络技术研讨、出海技术选型参考及消费者避坑科普，不构成任何商业投资、法律或强制购买建议。
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>二、实测数据有效性与免责声明</h2>
+      <p>
+        1. <strong>时效性说明：</strong>本站发布的延迟（Latency）、峰值下载带宽（Throughput）及丢包率（Packet Loss）数据，均基于本站实验室特定网络环境（如特定时间段、特定运营商中国电信/联通/移动宽带及特定地理入口）的实际抓包测试结果。互联网路由瞬息万变，受海底光缆割接、国际骨干网抖动、运营商 QoS 限制等不可抗力因素影响，您的实际体验可能与测试数据存在客观差异。
+      </p>
+      <p>
+        2. <strong>商业运营变动：</strong>各机场服务商的套餐资费、节点拓扑、节点增减及优惠码均为商家自主行为，商家可能随时在无事先通知的情况下调整政策。本站尽最大努力保持数据定期巡检与核实，但不就商家单方面的价格变更、服务下线或不可抗力中断承担任何连带责任。
+      </p>
+      <p>
+        3. <strong>跑路与资金风险警告：</strong>在野蛮生长的代理市场中，部分小型商家存在运营不善导致失联或停止服务的风险。本站设立《跑路预警专题》旨在帮助用户识别资金盘陷阱。我们始终秉持<strong>“严禁大额长周期预付、优先按月订购或低额按量付费”</strong>的核心风控原则，任何用户在第三方平台发生的资金纠纷应依据消费者法律及支付渠道争议机制处理，本站不承担任何直接或连带赔偿责任。
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>三、用户守法承诺</h2>
+      <p>
+        用户在查阅本站技术科普与客户端配置教程时，必须承诺严格遵守其所在地及国际适用的法律法规：
+      </p>
+      <ul>
+        <li>所有跨境网络访问工具与技术，仅限于<strong>学术文献检索（如 Google Scholar、arXiv、Sci-Hub）、正当跨境电商办公、跨国软件开发与合规技术交流</strong>。</li>
+        <li>严禁利用本站提及的任何工具或节点从事侵犯他人知识产权、网络攻击、洗钱、传播非法有害信息等危害网络安全及社会秩序的行为。对于用户违反法律法规所造成的任何直接或间接后果，由行为人自行承担全部法律责任。</li>
+      </ul>
+    </section>
+
+    <section class="legal-section">
+      <h2>四、知识产权与内容引用规范</h2>
+      <p>
+        本站所有万字原创专著报告、对比矩阵图表、故障排查诊断树、技术白皮书及文字版面设计，版权均归“机场推荐智库”所有。任何个人或机构允许在标明<strong>原始出处超链接（Canonical URL）</strong>的前提下进行非商业性学术引用，严禁任何未经授权的全量爬取、洗稿聚合或商业性盗用。
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>五、条款修改与最终解释权</h2>
+      <p>
+        本站保留根据互联网技术演进及法律法规要求，适时修订本条款的权利。修改后的条款一经在本页面公布即刻生效。
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .legal-container {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  .legal-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .legal-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: color-mix(in oklab, var(--accent) 12%, var(--background));
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  .legal-title {
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+    font-weight: 800;
+    color: var(--foreground);
+    margin-bottom: 0.8rem;
+  }
+  .legal-date {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .legal-card {
+    background: color-mix(in oklab, var(--muted) 10%, var(--background));
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+  }
+  .legal-section {
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+  .legal-section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid color-mix(in oklab, var(--muted) 20%, var(--background));
+    padding-bottom: 0.5rem;
+  }
+  .legal-section ul {
+    padding-left: 1.5rem;
+    margin-top: 0.8rem;
+  }
+  .legal-section li {
+    margin-bottom: 0.6rem;
+  }
+</style>

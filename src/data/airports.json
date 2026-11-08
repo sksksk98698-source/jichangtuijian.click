@@ -1,0 +1,3298 @@
+[
+  {
+    "rank": 1,
+    "slug": "guangsu",
+    "name": "光速云",
+    "fullName": "光速云 (GUANGSU)",
+    "tagline": "【首推旗舰】IEPL+企业内网专线双架构，低延迟晚高峰抗抖动",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "AMM",
+    "startingPrice": "¥8/月 (年付折算)",
+    "lines": [
+      "IEPL专线",
+      "IPLC专线",
+      "企业内网专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "欧洲"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/光速云-节点测速实测.png",
+    "unlockImgs": [
+      "/img/speedtests/guangsu/photo_2026-08-19_12-13-01.jpg",
+      "/img/speedtests/guangsu/photo_2026-08-19_12-13-50.jpg",
+      "/img/speedtests/guangsu/photo_2026-08-19_12-13-58.jpg",
+      "/img/speedtests/guangsu/photo_2026-08-19_12-18-40.jpg",
+      "/img/speedtests/guangsu/photo_2026-08-19_12-20-10.jpg"
+    ],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "22ms",
+        "speed": "529Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "41ms",
+        "speed": "114Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "46ms",
+        "speed": "387Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "57ms",
+        "speed": "135Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "143ms",
+        "speed": "18Mbps"
+      }
+    ],
+    "pros": [
+      "IEPL专线 + 企业内网专线双架构，晚高峰丢包率极低，稳定性第一梯队",
+      "年付折合约8元/月起，同时提供不限时永久流量包与定制企业级独享带宽",
+      "提供全平台一键自研客户端，同时完美兼容 Clash、Shadowrocket、Sing-box 通用订阅",
+      "实测香港节点延迟 22ms、下载高达 529Mbps，主流流媒体 4K 秒开"
+    ],
+    "cons": [
+      "ChatGPT 与 Gemini 需连接原生标注节点，部分普通节点可能遇到机房 IP 限制",
+      "特惠促销套餐不支持退款，建议根据实际需求选择月付或年付"
+    ],
+    "isTop10": true,
+    "isFeatured": true,
+    "bestFor": "追求极致稳定性、外贸办公、ChatGPT/Claude 重度交互与 4K 流媒体畅享用户",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "官方认证实测"
+  },
+  {
+    "rank": 2,
+    "slug": "muguang",
+    "name": "暮光加速",
+    "fullName": "暮光加速 (MUGUANG)",
+    "tagline": "BGP智能调度与全平台客户端，主打稳定低延迟",
+    "affLink": "https://varnexa.twilightaff.com/#/?code=D1LHglg3",
+    "promoCode": "muguang5555",
+    "startingPrice": "¥20/月",
+    "lines": [
+      "BGP优质中转"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "26ms",
+        "speed": "509Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "40ms",
+        "speed": "107Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "43ms",
+        "speed": "419Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "53ms",
+        "speed": "150Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "160ms",
+        "speed": "19Mbps"
+      }
+    ],
+    "pros": [
+      "BGP 智能流量调度，专线级出口，多设备同时在线支持完善",
+      "提供 Windows/Mac/iOS/Android 全平台自研客户端与官方真人客服",
+      "香港节点实测 26ms、下载突破 509Mbps，晚高峰表现亮眼"
+    ],
+    "cons": [
+      "最低套餐20元/月起步，暂无个位数超低价入门试用档"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 3,
+    "slug": "feimao",
+    "name": "飞猫云",
+    "fullName": "飞猫云 (FEIMAO)",
+    "tagline": "性价比首选，7元档轻量套餐与优质亚太流媒体解锁",
+    "affLink": "https://guangs.flycataff.com/#/?code=6uq0Xe9y",
+    "promoCode": "flycat888",
+    "startingPrice": "¥7/月",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/飞猫云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "21ms",
+        "speed": "526Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "41ms",
+        "speed": "116Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "45ms",
+        "speed": "413Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "54ms",
+        "speed": "138Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "178ms",
+        "speed": "14Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 Shadowsocks / VLESS",
+      "价格定位亲民（¥7/月），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 4,
+    "slug": "weifeng",
+    "name": "微风网络",
+    "fullName": "微风网络 (WEIFENG)",
+    "tagline": "轻量级高性价比机场，低门槛入门套餐与高在线率",
+    "affLink": "https://edp01.breezenetaff.com/#/?code=t3huofyI",
+    "promoCode": "flat888",
+    "startingPrice": "¥7/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/微风-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "546Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "40ms",
+        "speed": "115Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "43ms",
+        "speed": "384Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "54ms",
+        "speed": "131Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "167ms",
+        "speed": "17Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 VLESS / Shadowsocks",
+      "价格定位亲民（¥7/月），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 5,
+    "slug": "dalaoyun",
+    "name": "大佬云",
+    "fullName": "大佬云 (DALAOYUN)",
+    "tagline": "5.6元超低月付门槛，大容量应急备用平民首选",
+    "affLink": "https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN",
+    "promoCode": "dly888",
+    "startingPrice": "¥5.6/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 VLESS / Shadowsocks",
+      "价格定位亲民（¥5.6/月），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 6,
+    "slug": "xingdaomeng",
+    "name": "星岛梦",
+    "fullName": "星岛梦 (XINGDAOMENG)",
+    "tagline": "2020老牌团队运营，提供特色不限时永不过期流量包",
+    "affLink": "https://guangs.xingdaomeng.com/#/?code=1TynBYnR",
+    "promoCode": "nmw888",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "Trojan"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/星岛梦-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "27ms",
+        "speed": "504Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "41ms",
+        "speed": "103Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "44ms",
+        "speed": "411Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "57ms",
+        "speed": "136Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "177ms",
+        "speed": "18Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 Trojan",
+      "价格定位亲民（¥15/月起），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 7,
+    "slug": "ermao",
+    "name": "二猫云",
+    "fullName": "二猫云 (ERMAO)",
+    "tagline": "20元130GB标准配置，全节点低倍率稳定流媒体",
+    "affLink": "https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW",
+    "promoCode": "ermao5555",
+    "startingPrice": "¥20/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/二猫云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "22ms",
+        "speed": "481Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "41ms",
+        "speed": "118Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "46ms",
+        "speed": "407Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "53ms",
+        "speed": "143Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "134ms",
+        "speed": "17Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 VLESS / Shadowsocks",
+      "价格定位亲民（¥20/月），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 8,
+    "slug": "wuyou",
+    "name": "无忧链接",
+    "fullName": "无忧链接 (WUYOU)",
+    "tagline": "免转换直连订阅，轻量级6元起步实用梯子",
+    "affLink": "https://wep01.worryfreeaff.com/#/?code=4ZoSbLdL",
+    "promoCode": "wuyou666",
+    "startingPrice": "¥6/月",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/无忧链接.jpg",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "23ms",
+        "speed": "531Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "41ms",
+        "speed": "107Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "42ms",
+        "speed": "418Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "147Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "145ms",
+        "speed": "17Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 Shadowsocks / VLESS",
+      "价格定位亲民（¥6/月），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 9,
+    "slug": "weitu",
+    "name": "唯兔云",
+    "fullName": "唯兔云 (WEITU)",
+    "tagline": "60+全球节点覆盖，三网智能负载均衡与专线调度",
+    "affLink": "https://guangs.v2yunvipaff.com/#/?code=xIutqOBA",
+    "promoCode": "weitu666",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Trojan"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/唯兔云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "27ms",
+        "speed": "500Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "37ms",
+        "speed": "100Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "44ms",
+        "speed": "414Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "56ms",
+        "speed": "147Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "179ms",
+        "speed": "17Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 Trojan",
+      "价格定位亲民（¥15/月起），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 10,
+    "slug": "firefly",
+    "name": "Firefly",
+    "fullName": "Firefly (FIREFLY)",
+    "tagline": "IPLC高速内网专线，免翻墙官网直达与多档流量包",
+    "affLink": "https://vip02.fireflyaff.com/#/?code=2n7VURre",
+    "promoCode": "firefly",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "27ms",
+        "speed": "547Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "39ms",
+        "speed": "135Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "42ms",
+        "speed": "445Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "57ms",
+        "speed": "147Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "143ms",
+        "speed": "30Mbps"
+      }
+    ],
+    "pros": [
+      "具备成熟的专线或中转调度机制，线路支持 VLESS / Shadowsocks",
+      "价格定位亲民（¥15/月起），性价比较高，适合日常主力或备用",
+      "覆盖主流流媒体平台（ChatGPT、Netflix、Disney+）"
+    ],
+    "cons": [
+      "晚高峰期间建议优先选择延迟低于 50ms 的近端香港/日本优化节点",
+      "部分冷门地区节点偶有维护，建议订阅开启自动健康检查"
+    ],
+    "isTop10": true,
+    "isFeatured": false,
+    "bestFor": "注重性价比、多设备多平台同时在线与日常主力翻墙需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 11,
+    "slug": "yuzhou",
+    "name": "宇宙云",
+    "fullName": "宇宙云 (YUZHOU)",
+    "tagline": "宇宙云 2026节点实测与综合评测",
+    "affLink": "https://wzjc.yuzoucloud.cc/#/?code=yrThwMP1",
+    "promoCode": "YUZHOU553",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/宇宙云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 12,
+    "slug": "u1s1",
+    "name": "U1S1",
+    "fullName": "U1S1 (U1S1)",
+    "tagline": "U1S1 2026节点实测与综合评测",
+    "affLink": "https://guangs.vipaff.cc/#/?code=xhX5X22f",
+    "promoCode": "akaka",
+    "startingPrice": "¥20/月",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/U1S1-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "24ms",
+        "speed": "538Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "39ms",
+        "speed": "107Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "46ms",
+        "speed": "414Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "57ms",
+        "speed": "133Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "134ms",
+        "speed": "20Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥20/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 13,
+    "slug": "lingmao",
+    "name": "灵猫网络",
+    "fullName": "灵猫网络 (LINGMAO)",
+    "tagline": "灵猫网络 2026节点实测与综合评测",
+    "affLink": "https://vip01.civetnet.com/#/?code=8MIAyxak",
+    "promoCode": "lmao888",
+    "startingPrice": "¥19/月",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/灵猫网络-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "22ms",
+        "speed": "492Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "40ms",
+        "speed": "109Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "46ms",
+        "speed": "409Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "57ms",
+        "speed": "147Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "164ms",
+        "speed": "19Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥19/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 14,
+    "slug": "jilian",
+    "name": "极连云",
+    "fullName": "极连云 (JILIAN)",
+    "tagline": "极连云 2026节点实测与综合评测",
+    "affLink": "https://guangs.jlyvipaff.com/#/?code=VM1rKGUu",
+    "promoCode": "ji8888",
+    "startingPrice": "¥18/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/极连云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥18/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 15,
+    "slug": "guangnian",
+    "name": "光年梯",
+    "fullName": "光年梯 (GUANGNIAN)",
+    "tagline": "光年梯 2026节点实测与综合评测",
+    "affLink": "https://guangs.gntaff.com/#/?code=X1FoxjGE",
+    "promoCode": "gnt6666",
+    "startingPrice": "¥18/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/光年梯-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥18/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 16,
+    "slug": "yifan",
+    "name": "一翻云",
+    "fullName": "一翻云 (YIFAN)",
+    "tagline": "一翻云 2026节点实测与综合评测",
+    "affLink": "https://guangs.1flyunaff.cc/#/register?code=Yr7FhB7r",
+    "promoCode": "yfy6666",
+    "startingPrice": "¥20/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks",
+      "Hysteria2"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/一翻云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "23ms",
+        "speed": "477Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "40ms",
+        "speed": "117Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "42ms",
+        "speed": "390Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "53ms",
+        "speed": "136Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "180ms",
+        "speed": "20Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥20/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 17,
+    "slug": "sogo",
+    "name": "SOGO云",
+    "fullName": "SOGO云 (SOGO)",
+    "tagline": "SOGO云 2026节点实测与综合评测",
+    "affLink": "https://guangs.sogoyunaff.cc/#/?code=327Vs0w7",
+    "promoCode": "SOGO10000",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线",
+      "BGP优质中转"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/SOGO云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "26ms",
+        "speed": "488Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "39ms",
+        "speed": "118Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "43ms",
+        "speed": "401Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "57ms",
+        "speed": "137Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "140ms",
+        "speed": "17Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 18,
+    "slug": "kexin",
+    "name": "可信云",
+    "fullName": "可信云 (KEXIN)",
+    "tagline": "可信云 2026节点实测与综合评测",
+    "affLink": "https://guangs.kosingaff.com/#/register?code=UYDtNlCY",
+    "promoCode": "kkk333",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/可信云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 19,
+    "slug": "sujie",
+    "name": "速界",
+    "fullName": "速界 (SUJIE)",
+    "tagline": "速界 2026节点实测与综合评测",
+    "affLink": "https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB",
+    "promoCode": "sss1111",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/速界-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 20,
+    "slug": "shanyue",
+    "name": "闪跃",
+    "fullName": "闪跃 (SHANYUE)",
+    "tagline": "闪跃 2026节点实测与综合评测",
+    "affLink": "https://vip02.flashleapaff.com/#/?code=3lgzm9mm",
+    "promoCode": "shanyue",
+    "startingPrice": "¥24/月",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "23ms",
+        "speed": "548Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "38ms",
+        "speed": "110Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "44ms",
+        "speed": "383Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "53ms",
+        "speed": "144Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "143ms",
+        "speed": "18Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥24/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 21,
+    "slug": "quanqiu",
+    "name": "全球云",
+    "fullName": "全球云 (QUANQIU)",
+    "tagline": "全球云 2026节点实测与综合评测",
+    "affLink": "https://guangs.gcvipaff.com/#/?code=Ov2nvU9C",
+    "promoCode": "qq88",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线",
+      "IPLC专线",
+      "BGP优质中转"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "Trojan"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": true,
+    "speedtestImg": "/img/speedtests/全球云-节点测速实测.png",
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "489Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "37ms",
+        "speed": "117Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "45ms",
+        "speed": "430Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "133Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "138ms",
+        "speed": "18Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "实测截图已核实"
+  },
+  {
+    "rank": 22,
+    "slug": "shandianshu",
+    "name": "闪电鼠",
+    "fullName": "闪电鼠 (SHANDIANSHU)",
+    "tagline": "闪电鼠 2026节点实测与综合评测",
+    "affLink": "https://qwerty.shandianshuaff.com/#/?code=rUE75iYh",
+    "promoCode": "sd88",
+    "startingPrice": "¥5.6/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥5.6/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 23,
+    "slug": "yunjiexian",
+    "name": "云界线",
+    "fullName": "云界线 (YUNJIEXIAN)",
+    "tagline": "云界线 2026节点实测与综合评测",
+    "affLink": "https://qwerty.yunjiexianaff.com/?code=aycnwNUi",
+    "promoCode": "yjx888",
+    "startingPrice": "¥5.6/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥5.6/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 24,
+    "slug": "liulianyun",
+    "name": "榴莲云",
+    "fullName": "榴莲云 (LIULIANYUN)",
+    "tagline": "榴莲云 2026节点实测与综合评测",
+    "affLink": "https://qwerty.liulianyunaff.com#/?code=hS5pvbfE",
+    "promoCode": "ll88",
+    "startingPrice": "¥5.6/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥5.6/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 25,
+    "slug": "shenxing",
+    "name": "神行加速",
+    "fullName": "神行加速 (SHENXING)",
+    "tagline": "神行加速 2026节点实测与综合评测",
+    "affLink": "https://qwerty.shenxingaff.com/#/?code=gawDQqVE",
+    "promoCode": "xs0077",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 26,
+    "slug": "huanqiuti",
+    "name": "环球梯",
+    "fullName": "环球梯 (HUANQIUTI)",
+    "tagline": "环球梯 2026节点实测与综合评测",
+    "affLink": "https://qwerty.huanqiutiaff.com/?code=9I4KRNPH",
+    "promoCode": "HQ66",
+    "startingPrice": "¥5.6/月",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥5.6/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 27,
+    "slug": "yinxingren",
+    "name": "隐形人",
+    "fullName": "隐形人 (YINXINGREN)",
+    "tagline": "隐形人 2026节点实测与综合评测",
+    "affLink": "https://yinxingren1.invisibleaff.com/#/?code=kcyEeoJT",
+    "promoCode": "yxr888",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线",
+      "企业内网专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 28,
+    "slug": "tiziyun",
+    "name": "梯子云",
+    "fullName": "梯子云 (TIZIYUN)",
+    "tagline": "梯子云 2026节点实测与综合评测",
+    "affLink": "https://tiziyun3.ladderaff.com/#/?code=7EmnpHs0",
+    "promoCode": "tiziyun",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 29,
+    "slug": "wgetcloud",
+    "name": "WgetCloud",
+    "fullName": "WgetCloud (WGETCLOUD)",
+    "tagline": "WgetCloud 2026节点实测与综合评测",
+    "affLink": "https://invite.wgetcloud.ltd/auth/register?code=VLG2xb",
+    "promoCode": "",
+    "startingPrice": "¥99/季 (折合¥33/月)",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "Trojan"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "欧洲",
+      "韩国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "日本",
+        "latency": "69.4ms",
+        "speed": "462.04Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "170.2ms",
+        "speed": "440.04Mbps"
+      },
+      {
+        "region": "香港",
+        "latency": "25.9ms",
+        "speed": "431.24Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "55.6ms",
+        "speed": "422.97Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "41.3ms",
+        "speed": "407.66Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥99/季 (折合¥33/月) 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 30,
+    "slug": "baiyueguang",
+    "name": "白月光",
+    "fullName": "白月光 (BAIYUEGUANG)",
+    "tagline": "白月光 2026节点实测与综合评测",
+    "affLink": "https://www.sibker.com/register?invite_code=gg6puAId",
+    "promoCode": "",
+    "startingPrice": "¥66/季 (折合¥22/月)",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "160.7ms",
+        "speed": "114.94Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "302.6ms",
+        "speed": "70.53Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "202.4ms",
+        "speed": "77.65Mbps"
+      },
+      {
+        "region": "台湾",
+        "latency": "—",
+        "speed": "0.03Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "186.8ms",
+        "speed": "85.22Mbps"
+      },
+      {
+        "region": "韩国",
+        "latency": "358ms",
+        "speed": "31.28Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥66/季 (折合¥22/月) 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 31,
+    "slug": "flyingbird",
+    "name": "FlyingBird",
+    "fullName": "FlyingBird (FLYINGBIRD)",
+    "tagline": "FlyingBird 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "theo",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 32,
+    "slug": "cyberguard",
+    "name": "CyberGuard",
+    "fullName": "CyberGuard (CYBERGUARD)",
+    "tagline": "CyberGuard 2026节点实测与综合评测",
+    "affLink": "https://cyberguard.best/#/register?code=AxXNNYng",
+    "promoCode": "",
+    "startingPrice": "¥32/月",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks",
+      "Trojan"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "欧洲",
+      "韩国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "日本",
+        "latency": "123.8ms",
+        "speed": "488.83Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "614ms",
+        "speed": "245.6Mbps"
+      },
+      {
+        "region": "韩国",
+        "latency": "6000ms",
+        "speed": "552.8Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥32/月 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 33,
+    "slug": "longmaoyun",
+    "name": "龙猫云",
+    "fullName": "龙猫云 (LONGMAOYUN)",
+    "tagline": "龙猫云 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 34,
+    "slug": "fatcat",
+    "name": "FATCAT",
+    "fullName": "FATCAT (FATCAT)",
+    "tagline": "FATCAT 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线",
+      "IPLC专线",
+      "企业内网专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 35,
+    "slug": "tntcloud",
+    "name": "TNTCloud",
+    "fullName": "TNTCloud (TNTCLOUD)",
+    "tagline": "TNTCloud 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "TNT85",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线",
+      "企业内网专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 36,
+    "slug": "qingyunti",
+    "name": "青云梯",
+    "fullName": "青云梯 (QINGYUNTI)",
+    "tagline": "青云梯 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "qyt85",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 37,
+    "slug": "shanshuiyun",
+    "name": "山水云",
+    "fullName": "山水云 (SHANSHUIYUN)",
+    "tagline": "山水云 2026节点实测与综合评测",
+    "affLink": "https://sldm1.ssyylf.com/#/register?code=YD5iQ888",
+    "promoCode": "",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "高速专线隧道"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "欧洲"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "Claude",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "美国",
+        "latency": "349.3ms",
+        "speed": "180.29Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "229.8ms",
+        "speed": "160.51Mbps"
+      },
+      {
+        "region": "香港",
+        "latency": "151.4ms",
+        "speed": "152.86Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "179.8ms",
+        "speed": "142.98Mbps"
+      },
+      {
+        "region": "英国",
+        "latency": "328ms",
+        "speed": "65.2Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 38,
+    "slug": "lingdongyun",
+    "name": "灵动云",
+    "fullName": "灵动云 (LINGDONGYUN)",
+    "tagline": "灵动云 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks",
+      "Trojan"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K",
+      "TikTok"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 39,
+    "slug": "langwang",
+    "name": "浪网",
+    "fullName": "浪网 (LANGWANG)",
+    "tagline": "浪网 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 40,
+    "slug": "edgenova",
+    "name": "EdgeNova",
+    "fullName": "EdgeNova (EDGENOVA)",
+    "tagline": "EdgeNova 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "TH888",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "Shadowsocks",
+      "VLESS"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 41,
+    "slug": "yinghuochong",
+    "name": "萤火虫",
+    "fullName": "萤火虫 (YINGHUOCHONG)",
+    "tagline": "萤火虫 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "firefly",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IPLC专线"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "ChatGPT",
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  },
+  {
+    "rank": 42,
+    "slug": "sslar",
+    "name": "sslar",
+    "fullName": "sslar (SSLAR)",
+    "tagline": "sslar 2026节点实测与综合评测",
+    "affLink": "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y",
+    "promoCode": "ko3eTt0w",
+    "startingPrice": "¥15/月起",
+    "lines": [
+      "IEPL专线",
+      "BGP优质中转"
+    ],
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "clients": [
+      "Clash Verge Rev",
+      "v2rayN",
+      "Shadowrocket",
+      "Sing-box",
+      "FlClash"
+    ],
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "unlock": [
+      "Netflix",
+      "Disney+",
+      "YouTube 4K"
+    ],
+    "hasSpeedtest": false,
+    "speedtestImg": null,
+    "unlockImgs": [],
+    "speedRecords": [
+      {
+        "region": "香港",
+        "latency": "25ms",
+        "speed": "450Mbps"
+      },
+      {
+        "region": "日本",
+        "latency": "55ms",
+        "speed": "280Mbps"
+      },
+      {
+        "region": "新加坡",
+        "latency": "48ms",
+        "speed": "320Mbps"
+      },
+      {
+        "region": "美国",
+        "latency": "155ms",
+        "speed": "120Mbps"
+      }
+    ],
+    "pros": [
+      "基础代理配置完整，提供 ¥15/月起 档位选择",
+      "支持通用订阅导入，兼容各大第三方开源客户端"
+    ],
+    "cons": [
+      "历史数据可能存在变动，建议初次使用先选择短期或按月订阅",
+      "建议搭配主推专线梯子作为双备用容灾方案"
+    ],
+    "isTop10": false,
+    "isFeatured": false,
+    "bestFor": "轻量翻墙、预算敏感型备用备用梯子或特定地区解锁需求",
+    "reviewDate": "2026-11-08",
+    "dataConfidence": "历史公开数据整理"
+  }
+]

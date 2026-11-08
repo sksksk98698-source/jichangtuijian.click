@@ -1,0 +1,146 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+const pageTitle = "隐私政策 (Privacy Policy) - 机场推荐智库"
+const pageDesc = "本站隐私保护承诺与数据安全规范。作为独立的网络性能评测智库，我们严格遵循不收集个人凭证、不追踪敏感隐私、尊重数据主权的最高安全原则。"
+
+const breadcrumbs = [{ label: "隐私政策", icon: "mingcute:shield-line" }]
+---
+
+<Layout title={pageTitle} description={pageDesc} breadcrumbs={breadcrumbs}>
+  <div class="legal-container">
+    <header class="legal-header">
+      <div class="legal-badge">E-E-A-T 权威合规认证 · 数据安全承诺</div>
+      <h1 class="legal-title">隐私保护政策与数据安全声明</h1>
+      <p class="legal-date">最近更新生效日期：2026 年 11 月 8 日</p>
+    </header>
+
+    <div class="legal-card intro-box">
+      <p>
+        <strong>【核心摘要】</strong>“机场推荐智库”（以下简称“本站”，域名：<code>https://jichangtuijian.click</code>）致力于为全球科研人员、出海工程师、跨境电商与 AI 开发者提供客观、透明、基于物理实测的翻墙机场与跨境专线性能决策智库。
+      </p>
+      <p>
+        我们深刻理解网络隐私与信息安全的极端重要性。<strong>本站自身绝不提供任何翻墙节点代售服务，绝不索取、记录或存储任何用户的个人网络账号、密码、支付信息或代理订阅链接。</strong>
+      </p>
+    </div>
+
+    <section class="legal-section">
+      <h2>一、我们收集哪些信息？（数据最小化原则）</h2>
+      <p>本站严格恪守 GDPR 与个人信息保护最佳实践的“数据最小化（Data Minimization）”原则：</p>
+      <ul>
+        <li><strong>不收集个人身份信息（PII）：</strong>您无需在本站注册任何账户，无需提供姓名、电话号码、身份证件或个人邮箱。</li>
+        <li><strong>不记录用户代理订阅：</strong>本站提供的客户端教程与知识库仅指导用户在本地软件中配置节点，本站服务器绝不中转、劫持或记录用户的任何 Clash、v2rayN 或 Sing-box 订阅内容。</li>
+        <li><strong>基础服务器访问日志：</strong>与绝大多数网站相同，出于防御恶意攻击（如 DDOS、CC 爬虫撞库）的安全目的，我们的静态托管服务器可能会自动记录匿名的 IP 地址、浏览器类型（User-Agent）及请求时间戳。该日志仅用于网络安全审计，定期自动循环覆盖，绝不用于用户身份识别。</li>
+      </ul>
+    </section>
+
+    <section class="legal-section">
+      <h2>二、第三方外链与 Affiliate 商业说明</h2>
+      <p>
+        为了向用户提供便捷的直达服务，并维持本站服务器高昂的日常物理测速与节点带宽维护开销，本站部分页面包含带有防封保护的官方注册跳转链接（包含合规的 <code>rel="nofollow sponsored noopener"</code> 标签）。
+      </p>
+      <ul>
+        <li>当您点击这些外链时，您将离开本站并进入对应机场商家的独立网站平台。</li>
+        <li>您在第三方商家网站提交的任何注册信息、支付款项、实名信息，均由该商家独立的隐私协议与服务条款管辖。</li>
+        <li>我们强烈建议您在第三方平台注册时，<strong>遵循本站《防坑指南》给出的安全建议：优先使用境外匿名邮箱（如 ProtonMail、Gmail），切勿在不同平台复用银行级密码，严禁绑定自动续费信用卡。</strong></li>
+      </ul>
+    </section>
+
+    <section class="legal-section">
+      <h2>三、Cookie 与追踪技术声明</h2>
+      <p>
+        本站为纯静态 SSG（Static Site Generation）轻量化架构，<strong>不使用任何跨站广告追踪 Cookie，不接入任何滥用用户隐私的第三方数据画像联盟</strong>。
+      </p>
+      <p>
+        仅有的本地缓存机制为浏览器标准的 LocalStorage，仅用于记录您在阅读本站时选择的明暗主题偏好（Dark/Light Mode），且完全保留在您的本地设备上。
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>四、儿童隐私保护</h2>
+      <p>
+        本站所有学术文献调研、跨境网络架构科普与技术评测内容，均面向具备独立判断能力的成年技术用户或科研人员。我们绝不在知情的情况下收集 18 周岁以下未成年人的任何信息。
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>五、联系与权利行使</h2>
+      <p>
+        如果您对本站的隐私保护政策有任何疑问，或需要对技术数据进行反馈交流，可通过本站公开的合规联系渠道取得联系：
+      </p>
+      <div class="contact-box">
+        <span>📧 官方合规与反馈邮箱：</span>
+        <code>contact [at] jichangtuijian.click</code>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .legal-container {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  .legal-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .legal-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: color-mix(in oklab, var(--accent) 12%, var(--background));
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  .legal-title {
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+    font-weight: 800;
+    color: var(--foreground);
+    margin-bottom: 0.8rem;
+  }
+  .legal-date {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .legal-card {
+    background: color-mix(in oklab, var(--muted) 10%, var(--background));
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+  }
+  .legal-section {
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+  .legal-section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid color-mix(in oklab, var(--muted) 20%, var(--background));
+    padding-bottom: 0.5rem;
+  }
+  .legal-section ul {
+    padding-left: 1.5rem;
+    margin-top: 0.8rem;
+  }
+  .legal-section li {
+    margin-bottom: 0.6rem;
+  }
+  .contact-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: color-mix(in oklab, var(--muted) 15%, var(--background));
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+</style>

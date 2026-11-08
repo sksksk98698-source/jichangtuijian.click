@@ -14,7 +14,7 @@ import { satteriSidenotes } from "./src/plugins/satteri-sidenotes"
 import { normalizeHeadings } from "./src/plugins/satteri-normalize-headings"
 
 export default defineConfig({
-  site: "https://myscholar.pages.dev",
+  site: "https://jichangtuijian.click",
   compressHTML: true,
   trailingSlash: "never",
   output: "static",
@@ -24,15 +24,24 @@ export default defineConfig({
     layout: "constrained",
     remotePatterns: [
       { protocol: "data" },
-      { protocol: "https", hostname: "gravatar.com" },
+
     ],
   },
   integrations: [
     sitemap({
-      filter: (page) =>
-        !/\/blog\/[^/]+\/[^/]+\/?$/.test(page) &&
-        !/\/people\/[^/]+\/?$/.test(page) &&
-        !page.includes("/blog/tags/"),
+      filter: (page) => {
+        const excluded = [
+          '/blog',
+          '/people',
+          '/projects',
+          '/publications',
+          '/teaching',
+          '/uses',
+          '/palette',
+          '/404'
+        ];
+        return !excluded.some((prefix) => page.includes(prefix));
+      },
     }),
   ],
   server: { port: 4321, host: true },

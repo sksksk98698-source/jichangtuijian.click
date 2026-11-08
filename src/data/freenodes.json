@@ -1,0 +1,29 @@
+[
+  {
+    "id": "v2ray-free",
+    "protocol": "VMess / VLESS",
+    "sourceType": "开源公共代理池收集",
+    "securityScore": "低安全性 (有数据明文被嗅探风险)",
+    "speed": "2 - 15 Mbps (晚高峰极不稳定)",
+    "survivalTime": "数小时至 2 天内失效",
+    "riskNotice": "严禁在免费节点环境下登录私人网银、输入支付密码或处理敏感商业邮件"
+  },
+  {
+    "id": "clash-yaml-free",
+    "protocol": "Clash YAML 聚合订阅源",
+    "sourceType": "GitHub 自动化爬虫机器人抓取",
+    "securityScore": "中低安全性 (可能包含恶意中间人重定向)",
+    "speed": "5 - 25 Mbps (拥挤超售严重)",
+    "survivalTime": "每日批量更新失效",
+    "riskNotice": "建议在虚拟机或非核心手机中测试，仅用于临时紧急查阅文献"
+  },
+  {
+    "id": "hysteria-free",
+    "protocol": "Hysteria 2 / TUIC UDP 节点",
+    "sourceType": "第三方极客爱好者共享测试",
+    "securityScore": "中等安全性",
+    "speed": "10 - 45 Mbps (UDP暴力抢跑带宽)",
+    "survivalTime": "依赖赞助者服务器可用性",
+    "riskNotice": "虽然 UDP 抢包快，但经常被本地运营商限速 QoS 或封阻端口"
+  }
+]

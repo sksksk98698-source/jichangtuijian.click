@@ -1,0 +1,281 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { getAllAirports } from "@/data/airports"
+import AirportCard from "@/components/airports/AirportCard.astro"
+import AffDisclaimer from "@/components/airports/AffDisclaimer.astro"
+
+const all = getAllAirports()
+
+// ItemList schema for SEO
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "2026 全球42家主流翻墙机场品牌库索引",
+  description: "收录2026年全网42家主流代理翻墙机场，涵盖IEPL内网专线、BGP中转与高性价比月付梯子实测数据。",
+  numberOfItems: all.length,
+  itemListElement: all.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    url: `https://jichangtuijian.click/reviews/${item.slug}`,
+  })),
+}
+---
+
+<Layout
+  title="42家机场品牌库 - 2026主流翻墙梯子参数与测速全景索引"
+  description="收录2026年全网42家主流翻墙机场品牌库，支持按IEPL专线、协议类型、入门价格与实测图快速检索。包含光速云、暮光加速、飞猫云等全面评测档案。"
+  breadcrumbs={[{ label: "42家品牌库", icon: "mingcute:grid-line" }]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+
+  <div class="brands-page">
+    <header class="page-intro">
+      <div class="badge-tag">📚 权威品牌百科索引</div>
+      <h1 class="page-title">42 家主流翻墙机场品牌库 (2026 全景档案)</h1>
+      <p class="page-desc">
+        这里收录了实验室持续追踪评测的 42 家机场服务商。包含<strong>线路架构、协议支持、真实最低起步价格、晚高峰测速图存档与官方直达通道</strong>。拒绝空头宣传，客观标注数据核查状态。
+      </p>
+    </header>
+
+    <AffDisclaimer />
+
+    <!-- Interactive Filter Section -->
+    <div class="filter-controls">
+      <div class="search-box">
+        <input
+          type="text"
+          id="brand-search"
+          placeholder="🔍 输入品牌名称或协议（如 光速云, IEPL, VLESS, 7元）..."
+          aria-label="搜索机场品牌"
+        />
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">全部 (42)</button>
+        <button class="filter-btn" data-filter="top10">🏆 前十主推 (10)</button>
+        <button class="filter-btn" data-filter="iepl">⚡ 专线架构 (20+)</button>
+        <button class="filter-btn" data-filter="speedtest">📸 含测速图 (17)</button>
+      </div>
+    </div>
+
+    <div id="brands-container" class="cards-grid">
+      {all.map((airport) => (
+        <div
+          class="brand-item-wrapper"
+          data-name={airport.name.toLowerCase()}
+          data-slug={airport.slug}
+          data-lines={airport.lines.join(",").toLowerCase()}
+          data-protocols={airport.protocols.join(",").toLowerCase()}
+          data-price={airport.startingPrice}
+          data-top10={airport.isTop10 ? "true" : "false"}
+          data-iepl={airport.lines.some((l) => l.includes("IEPL") || l.includes("IPLC")) ? "true" : "false"}
+          data-speedtest={airport.hasSpeedtest ? "true" : "false"}
+        >
+          <AirportCard airport={airport} />
+        </div>
+      ))}
+    </div>
+
+    <!-- Empty state -->
+    <div id="no-results" class="empty-state" style="display: none;">
+      <div class="empty-icon">🔎</div>
+      <h3>未找到匹配的机场品牌</h3>
+      <p>请尝试更换搜索关键字，或点击“全部”查看完整 42 家机场列表。</p>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  function initBrandFilter() {
+    const searchInput = document.getElementById("brand-search")
+    const filterBtns = document.querySelectorAll(".filter-btn")
+    const items = document.querySelectorAll(".brand-item-wrapper")
+    const noResults = document.getElementById("no-results")
+
+    if (!items.length) return
+
+    let currentFilter = "all"
+    let currentQuery = ""
+
+    function updateView() {
+      let visibleCount = 0
+
+      items.forEach((item) => {
+        const name = item.getAttribute("data-name") || ""
+        const slug = item.getAttribute("data-slug") || ""
+        const lines = item.getAttribute("data-lines") || ""
+        const protocols = item.getAttribute("data-protocols") || ""
+        const price = item.getAttribute("data-price") || ""
+        const isTop10 = item.getAttribute("data-top10") === "true"
+        const isIepl = item.getAttribute("data-iepl") === "true"
+        const hasSpeedtest = item.getAttribute("data-speedtest") === "true"
+
+        // Search match
+        const matchesQuery =
+          !currentQuery ||
+          name.includes(currentQuery) ||
+          slug.includes(currentQuery) ||
+          lines.includes(currentQuery) ||
+          protocols.includes(currentQuery) ||
+          price.includes(currentQuery)
+
+        // Filter tab match
+        let matchesFilter = true
+        if (currentFilter === "top10") matchesFilter = isTop10
+        else if (currentFilter === "iepl") matchesFilter = isIepl
+        else if (currentFilter === "speedtest") matchesFilter = hasSpeedtest
+
+        if (matchesQuery && matchesFilter) {
+          item.style.display = ""
+          visibleCount++
+        } else {
+          item.style.display = "none"
+        }
+      })
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none"
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        currentQuery = e.target.value.trim().toLowerCase()
+        updateView()
+      })
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => b.classList.remove("active"))
+        btn.classList.add("active")
+        currentFilter = btn.getAttribute("data-filter") || "all"
+        updateView()
+      })
+    })
+  }
+
+  document.addEventListener("DOMContentLoaded", initBrandFilter)
+  document.addEventListener("astro:page-load", initBrandFilter)
+</script>
+
+<style>
+  .brands-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .page-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: color-mix(in oklab, var(--accent) 15%, transparent);
+    color: var(--accent);
+    border-radius: var(--radius-full);
+    font-size: var(--step--1);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-title {
+    font-size: var(--step-2);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-desc {
+    color: var(--muted-foreground);
+    font-size: var(--step-0);
+    line-height: 1.6;
+  }
+
+  .filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    background: color-mix(in oklab, var(--muted) 15%, var(--background));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--foreground);
+    font-size: var(--step-0);
+    outline: none;
+    transition: border-color var(--motion-duration-fast) var(--motion-ease);
+  }
+
+  .search-box input:focus {
+    border-color: var(--accent);
+  }
+
+  .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+    cursor: pointer;
+    transition: all var(--motion-duration-fast) var(--motion-ease);
+  }
+
+  .filter-btn:hover {
+    color: var(--foreground);
+    border-color: var(--foreground);
+  }
+
+  .filter-btn.active {
+    background: var(--accent);
+    color: var(--accent-foreground, #fff);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-s);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--space-xl) var(--space-m);
+    background: color-mix(in oklab, var(--muted) 20%, var(--background));
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-lg);
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .empty-state h3 {
+    margin: 0 0 6px;
+    font-size: var(--step-1);
+  }
+
+  .empty-state p {
+    margin: 0;
+    color: var(--muted-foreground);
+  }
+</style>

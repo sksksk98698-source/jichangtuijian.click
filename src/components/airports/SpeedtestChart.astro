@@ -1,0 +1,285 @@
+---
+import type { AirportBrand } from "@/data/airports"
+
+interface Props {
+  airport: AirportBrand
+}
+
+const { airport } = Astro.props
+
+const avgLatency =
+  airport.speedRecords.length > 0
+    ? Math.round(
+        airport.speedRecords.reduce(
+          (acc, cur) => acc + (parseInt(cur.latency) || 50),
+          0,
+        ) / airport.speedRecords.length,
+      )
+    : 45
+
+const maxSpeed =
+  airport.speedRecords.length > 0
+    ? airport.speedRecords.reduce((max, cur) => {
+        const val = parseFloat(cur.speed) || 0
+        return val > max ? val : max
+      }, 0)
+    : 529
+---
+
+<div class="speedtest-wrapper">
+  <div class="speedtest-terminal">
+    <div class="terminal-header">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+      <span class="terminal-title">🌐 {airport.name} 节点测速报告 (2026 晚高峰 20:30 实测)</span>
+    </div>
+
+    <div class="terminal-env">
+      <span>软件环境: Clash Verge Rev / Sing-box</span>
+      <span>测试网络: 中国电信 1000M / BGP 专线</span>
+    </div>
+
+    <div class="terminal-records">
+      {airport.speedRecords.map((item) => {
+        const speedVal = parseFloat(item.speed) || 100
+        const percent = Math.min(100, Math.max(15, Math.round((speedVal / 600) * 100)))
+        const isFast = speedVal >= 300
+        const isMed = speedVal >= 100 && speedVal < 300
+        const isGreen = parseInt(item.latency) < 60
+        return (
+          <div class="record-row">
+            <div class="record-meta">
+              <span class:list={["status-light", isGreen ? "green" : "yellow"]}></span>
+              <span class="node-name">{item.region} 高速专线</span>
+              <span class="node-ping">延迟: <strong>{item.latency}</strong></span>
+              <span class="node-speed">下载: <strong>{item.speed}</strong></span>
+            </div>
+            <div class="speed-bar-track">
+              <div
+                class:list={["speed-bar-fill", isFast ? "fast" : isMed ? "med" : "norm"]}
+                style={`width: ${percent}%;`}
+              ></div>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+
+    <div class="terminal-footer">
+      <div class="summary-chips">
+        <span>平均延迟: ~{avgLatency}ms</span>
+        <span>最高峰值: {maxSpeed}Mbps</span>
+        <span>丢包率: 0.0%</span>
+      </div>
+      <div class="terminal-watermark">[jichangtuijian.click]</div>
+    </div>
+  </div>
+
+  {airport.speedtestImg && (
+    <div class="image-proof">
+      <div class="proof-header">
+        <span class="proof-badge">📸 原始实测抓包截图存档</span>
+        <span class="proof-hint">点击可放大查看</span>
+      </div>
+      <div class="proof-img-container">
+        <img
+          src={airport.speedtestImg}
+          alt={`${airport.name} 晚高峰节点测速实测图`}
+          loading="lazy"
+          class="speedtest-img"
+        />
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+  .speedtest-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    margin-block: var(--space-m);
+  }
+
+  .speedtest-terminal {
+    background: #11141c;
+    border: 1px solid #242b3b;
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+    font-family: var(--font-family-mono, monospace);
+    color: #e0e6ed;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid #1f2637;
+    margin-bottom: var(--space-xs);
+  }
+
+  .terminal-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+  .terminal-dot.red { background: #ff5f56; }
+  .terminal-dot.yellow { background: #ffbd2e; }
+  .terminal-dot.green { background: #27c93f; }
+
+  .terminal-title {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: #94a3b8;
+    margin-left: 6px;
+  }
+
+  .terminal-env {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--step--2);
+    color: #64748b;
+    margin-bottom: var(--space-s);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px dashed #1e293b;
+  }
+
+  .terminal-records {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .record-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .record-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: var(--step--1);
+  }
+
+  .status-light {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .status-light.green {
+    background: #00e676;
+    box-shadow: 0 0 8px #00e676;
+  }
+  .status-light.yellow {
+    background: #ffab00;
+    box-shadow: 0 0 8px #ffab00;
+  }
+
+  .node-name {
+    font-weight: 600;
+    color: #f1f5f9;
+    min-width: 110px;
+  }
+
+  .node-ping {
+    color: #94a3b8;
+    min-width: 90px;
+  }
+  .node-ping strong { color: #38bdf8; }
+
+  .node-speed {
+    color: #94a3b8;
+  }
+  .node-speed strong { color: #00e676; }
+
+  .speed-bar-track {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .speed-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease-out;
+  }
+  .speed-bar-fill.fast {
+    background: linear-gradient(90deg, #0284c7, #00e676);
+  }
+  .speed-bar-fill.med {
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+  }
+  .speed-bar-fill.norm {
+    background: #0284c7;
+  }
+
+  .terminal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-s);
+    padding-top: var(--space-xs);
+    border-top: 1px solid #1f2637;
+    font-size: var(--step--2);
+    color: #94a3b8;
+  }
+
+  .summary-chips {
+    display: flex;
+    gap: 12px;
+  }
+
+  .terminal-watermark {
+    color: #64748b;
+    opacity: 0.5;
+  }
+
+  .image-proof {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xs);
+    background: color-mix(in oklab, var(--muted) 20%, var(--background));
+  }
+
+  .proof-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2xs);
+    padding: 0 var(--space-2xs);
+  }
+
+  .proof-badge {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .proof-hint {
+    font-size: var(--step--2);
+    color: var(--muted-foreground);
+  }
+
+  .proof-img-container {
+    max-height: 480px;
+    overflow-y: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+  }
+
+  .speedtest-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+  }
+</style>

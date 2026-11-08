@@ -1,0 +1,220 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { getTop10Airports, getAllAirports } from "@/data/airports"
+import AirportCard from "@/components/airports/AirportCard.astro"
+import AffDisclaimer from "@/components/airports/AffDisclaimer.astro"
+
+const top10 = getTop10Airports()
+const all = getAllAirports()
+
+// Special categories
+const ieplAirports = all.filter((a) => a.lines.some((l) => l.includes("IEPL") || l.includes("IPLC"))).slice(0, 8)
+const budgetAirports = all.filter((a) => a.startingPrice.includes("5.") || a.startingPrice.includes("6") || a.startingPrice.includes("7") || a.startingPrice.includes("8")).slice(0, 8)
+---
+
+<Layout
+  title="2026年度翻墙机场排行榜 - 42家主流机场实测榜单"
+  description="2026最新翻墙机场推荐排行榜，基于中国电信/联通/移动晚高峰真实测速数据。第一主推光速云IEPL专线，深度评测暮光加速、飞猫云、微风网络等Top10高性价比梯子。"
+  breadcrumbs={[{ label: "机场排行", icon: "mingcute:trophy-line" }]}
+>
+  <div class="ranking-page">
+    <header class="page-intro">
+      <div class="badge-tag">📊 2026 权威天梯榜单</div>
+      <h1 class="page-title">2026 翻墙机场综合性能排行榜 (Top 10 精选)</h1>
+      <p class="page-desc">
+        本榜单汇总全网 42 家主流机场，结合<strong>晚高峰 20:00-23:00 真实带宽压测</strong>、<strong>0 丢包专线稳定性</strong>、<strong>ChatGPT/Claude 与 4K 流媒体解锁能力</strong>综合评分。
+      </p>
+    </header>
+
+    <AffDisclaimer />
+
+    <section class="rank-section">
+      <div class="section-head">
+        <h2>🏆 2026 年度十强核心梯队 (权威推荐)</h2>
+        <p class="section-sub">第一主推旗舰：光速云；辅以高性价比中转与老牌稳定梯子。</p>
+      </div>
+
+      <div class="cards-grid">
+        {top10.map((airport) => (
+          <AirportCard airport={airport} />
+        ))}
+      </div>
+    </section>
+
+    <section class="category-section">
+      <div class="cat-box">
+        <h3>⚡ 极致低延迟·企业级 IEPL/IPLC 专线榜</h3>
+        <p>适合外贸跨境办公、跨国远程桌面、竞技游戏加速与 AI 高频生产力：</p>
+        <ul class="cat-list">
+          {ieplAirports.map((a) => (
+            <li>
+              <a href={`/reviews/${a.slug}`}><strong>{a.name}</strong></a> - {a.lines.join(" / ")} - {a.startingPrice}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="cat-box">
+        <h3>💰 平民学生党·超高性价比百兆百吉榜</h3>
+        <p>月付门槛低至 5.6 元~8 元，适合预算有限、查阅资料与日常 YouTube 观影：</p>
+        <ul class="cat-list">
+          {budgetAirports.map((a) => (
+            <li>
+              <a href={`/reviews/${a.slug}`}><strong>{a.name}</strong></a> - {a.startingPrice} - {a.tagline}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="decision-guide">
+      <h2>💡 2026 机场选购三步决策法 (避坑原则)</h2>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <span class="step-num">01</span>
+          <h4>认准专线架构，拒绝直连公网</h4>
+          <p>晚高峰（20:00-23:00）是检验机场的唯一标准。普通公网直连在晚高峰丢包率常超 40%，务必优先选择具备 <strong>IEPL / IPLC 内网专线</strong> 架构的机场（如光速云、暮光加速）。</p>
+        </div>
+        <div class="guide-card">
+          <span class="step-num">02</span>
+          <h4>优先月付或季付，警惕超长大额年付</h4>
+          <p>除非像光速云这种 2020 年稳定运营至今的老牌综合服务商且提供超值 99 元年付/永久包，新品牌一律建议<strong>先月付体验 1-2 个月</strong>，观察节点抗封锁能力后再长期续订。</p>
+        </div>
+        <div class="guide-card">
+          <span class="step-num">03</span>
+          <h4>准备 1 主 1 备，双重容灾</h4>
+          <p>重要会议、外贸发信、跨国考试切忌把鸡蛋放在一个篮子里。建议选择<strong>一家旗舰专线作为日常主力 + 一家几元钱小额按量包作为备用容灾</strong>。</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .ranking-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .page-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: color-mix(in oklab, var(--accent) 15%, transparent);
+    color: var(--accent);
+    border-radius: var(--radius-full);
+    font-size: var(--step--1);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-title {
+    font-size: var(--step-2);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-desc {
+    color: var(--muted-foreground);
+    font-size: var(--step-0);
+    line-height: 1.6;
+  }
+
+  .section-head {
+    margin-bottom: var(--space-s);
+  }
+  .section-head h2 {
+    margin: 0;
+    font-size: var(--step-1);
+    font-weight: 700;
+  }
+  .section-sub {
+    margin: 4px 0 0;
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-s);
+  }
+
+  .category-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-s);
+  }
+
+  .cat-box {
+    background: color-mix(in oklab, var(--muted) 20%, var(--background));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+  }
+  .cat-box h3 {
+    margin: 0 0 6px;
+    font-size: var(--step-0);
+  }
+  .cat-box p {
+    margin: 0 0 var(--space-xs);
+    font-size: var(--step--1);
+    color: var(--muted-foreground);
+  }
+  .cat-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: var(--step--1);
+    line-height: 1.8;
+  }
+
+  .decision-guide h2 {
+    font-size: var(--step-1);
+    font-weight: 700;
+    margin-bottom: var(--space-s);
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-s);
+  }
+
+  .guide-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-s);
+    position: relative;
+  }
+
+  .step-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: color-mix(in oklab, var(--accent) 30%, transparent);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .guide-card h4 {
+    margin: 0 0 8px;
+    font-size: var(--step-0);
+  }
+  .guide-card p {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--muted-foreground);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .category-section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

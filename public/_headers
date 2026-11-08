@@ -1,13 +1,11 @@
-# Cloudflare Pages headers: https://developers.cloudflare.com/pages/configuration/headers/
-#
-# Build output in /_astro is content-hashed by Vite, so it's safe to cache
-# forever and skip revalidation entirely.
+# Cloudflare Pages headers
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Static assets below aren't hashed, so cache long but let the browser
-# revalidate on reload instead of marking them immutable.
 /fonts/*
+  Cache-Control: public, max-age=31536000
+
+/scripts/*
   Cache-Control: public, max-age=31536000
 
 /img/*

@@ -1,7 +1,3 @@
-I study how computational systems shape public knowledge and collective
-decision-making. My work combines **open data**, reproducible analysis, and
-human-centered evaluation.
+致力于为全球华人、跨境电商、AI 开发者与学术研究者提供**客观、透明、持续实测的翻墙机场选型决策智库**。
 
-This site is generic demonstration content for Astro Scholar. Replace the
-profile, publications, projects, and writing with your own work through the
-Markdown-first customization surfaces documented in the repository.
+我们长期监测全网 42 家主流机场的跨境物理链路，每日在晚高峰（20:00 - 23:00）针对中国电信、联通、移动三网环境执行带宽压测、延迟抖动与丢包率分析。我们坚持三项评测铁律：**拒绝虚构数据、杜绝无脑吹捧、所有测试结果保留原始抓包存档**。
